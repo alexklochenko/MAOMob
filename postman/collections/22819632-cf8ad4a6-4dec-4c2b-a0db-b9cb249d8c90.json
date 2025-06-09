@@ -1335,7 +1335,7 @@
 							"response": []
 						},
 						{
-							"name": "GetDocById Copy",
+							"name": "VerifyDoc",
 							"event": [
 								{
 									"listen": "test",
