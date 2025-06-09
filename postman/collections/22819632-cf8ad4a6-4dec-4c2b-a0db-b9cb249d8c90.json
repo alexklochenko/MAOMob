@@ -860,10 +860,18 @@
 										"id": "56cee623-a153-41fd-bb97-6470edb760d3",
 										"exec": [
 											"pm.environment.set(\"IdSinedDoc\", \"\");\r",
+											"\r",
+											"try\r",
+											"{\r",
 											"var idDoc=pm.response.json().DocumentList[0].IDDoc;\r",
 											"pm.environment.set(\"IdSinedDoc\", idDoc);\r",
+											"}\r",
+											"catch(e)\r",
+											"{\r",
+											"    console.log(\"No docs in such period\")\r",
+											"}\r",
 											"\r",
-											"console.log(pm.response.json());"
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
