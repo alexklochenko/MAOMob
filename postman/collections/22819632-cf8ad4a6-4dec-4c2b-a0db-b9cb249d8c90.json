@@ -1341,7 +1341,7 @@
 					"name": "Інформація про сертифікат яким було накладено підпис",
 					"item": [
 						{
-							"name": "GetDocById Copy",
+							"name": "GetCertInfo",
 							"event": [
 								{
 									"listen": "test",
