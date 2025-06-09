@@ -1316,7 +1316,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/FileDownload/GetDocumentFile/{{IdSinedDoc}}",
+									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetDocById/{{IdSinedDoc}}/0/18",
 									"protocol": "https",
 									"host": [
 										"testaoweb",
@@ -1326,9 +1326,12 @@
 									],
 									"path": [
 										"aoweb.test.api.srvc",
-										"FileDownload",
-										"GetDocumentFile",
-										"{{IdSinedDoc}}"
+										"api",
+										"MobileServiceAPI",
+										"GetDocById",
+										"{{IdSinedDoc}}",
+										"0",
+										"18"
 									]
 								}
 							},
