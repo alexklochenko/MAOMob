@@ -1089,83 +1089,6 @@
 							"response": []
 						},
 						{
-							"name": "GetDocumentFileOrig Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
-										"exec": [
-											"pm.test(\"Response status code is 500\", function () {\r",
-											"    pm.expect(pm.response.code).to.eql(500);\r",
-											"});\r",
-											"\r",
-											"\r",
-											"pm.test(\"Response time is less than 200ms\", function () {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-											"});\r",
-											"\r",
-											"\r",
-											"pm.test(\"Response content type is text/html\", function () {\r",
-											"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('text/html');\r",
-											"});\r",
-											"\r",
-											"\r",
-											"pm.test(\"Response body is empty\", function () {\r",
-											"    const responseBody = pm.response.text();\r",
-											"    pm.expect(responseBody).to.be.empty;\r",
-											"});\r",
-											"\r",
-											"\r",
-											"pm.test(\"Response schema matches expected structure\", function () {\r",
-											"    const responseData = pm.response.json();\r",
-											"\r",
-											"    pm.expect(responseData).to.be.an('object').that.is.empty;\r",
-											"});\r",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "22819632-e2b7902b-48d5-4355-8564-e6c77d79cfc4",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{AccessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/FileDownload/GetDocumentFile/{{IdSinedDoc}}",
-									"protocol": "https",
-									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
-									],
-									"path": [
-										"aoweb.test.api.srvc",
-										"FileDownload",
-										"GetDocumentFile",
-										"{{IdSinedDoc}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "GetDocumentFile",
 							"id": "22819632-5812143a-5eea-413c-aa74-723b530d5002",
 							"protocolProfileBehavior": {
@@ -1333,7 +1256,85 @@
 				},
 				{
 					"name": "Перегляд документа",
-					"item": [],
+					"item": [
+						{
+							"name": "GetDocumentFileOrig Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
+										"exec": [
+											"pm.test(\"Response status code is 500\", function () {\r",
+											"    pm.expect(pm.response.code).to.eql(500);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response content type is text/html\", function () {\r",
+											"    pm.expect(pm.response.headers.get('Content-Type')).to.equal('text/html');\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response body is empty\", function () {\r",
+											"    const responseBody = pm.response.text();\r",
+											"    pm.expect(responseBody).to.be.empty;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response schema matches expected structure\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"\r",
+											"    pm.expect(responseData).to.be.an('object').that.is.empty;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "22819632-e2b7902b-48d5-4355-8564-e6c77d79cfc4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/FileDownload/GetDocumentFile/{{IdSinedDoc}}",
+									"protocol": "https",
+									"host": [
+										"testaoweb",
+										"art-office",
+										"com",
+										"ua"
+									],
+									"path": [
+										"aoweb.test.api.srvc",
+										"FileDownload",
+										"GetDocumentFile",
+										"{{IdSinedDoc}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"id": "22819632-9c5810f1-0e86-473e-915e-258bdc50b249"
 				},
 				{
