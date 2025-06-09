@@ -1393,7 +1393,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/FileDownload/GetDocumentFile/{{IdSinedDoc}}",
+									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/FileDownload/VerifyDoc/{{IdSinedDoc}}",
 									"protocol": "https",
 									"host": [
 										"testaoweb",
@@ -1404,7 +1404,7 @@
 									"path": [
 										"aoweb.test.api.srvc",
 										"FileDownload",
-										"GetDocumentFile",
+										"VerifyDoc",
 										"{{IdSinedDoc}}"
 									]
 								}
