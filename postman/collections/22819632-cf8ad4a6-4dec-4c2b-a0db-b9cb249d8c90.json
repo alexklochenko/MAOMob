@@ -115,27 +115,76 @@
 									"urlencoded": [
 										{
 											"key": "Data",
-											"value": "{{KeyDataFoKlochenkoDps}}",
+											"value": "{{KeyDataFopKlochenko}}",
 											"type": "text",
-											"uuid": "57640583-03f3-4c14-b937-2b037e556907"
+											"uuid": "57640583-03f3-4c14-b937-2b037e556907",
+											"disabled": true
 										},
 										{
 											"key": "Certificate",
-											"value": "{{CertFoKlochDps}}",
+											"value": "{{CertFopKloch}}",
 											"type": "text",
-											"uuid": "87df311d-18da-43da-bd0a-bfc908691ab4"
+											"uuid": "87df311d-18da-43da-bd0a-bfc908691ab4",
+											"disabled": true
 										},
 										{
 											"key": "MasterData",
-											"value": "{{PassFoKlochDps}}",
+											"value": "{{PassFopKloch}}",
 											"type": "text",
-											"uuid": "61711494-bdac-4675-9334-da748a68f1b8"
+											"uuid": "61711494-bdac-4675-9334-da748a68f1b8",
+											"disabled": true
 										},
 										{
 											"key": "Token",
 											"value": "{{HasForSign}}",
 											"type": "text",
 											"uuid": "04213672-6823-4819-ba34-c0406d4104f0"
+										},
+										{
+											"key": "Data",
+											"value": "{{KeyDataFoKlochenkoDps}}",
+											"type": "text",
+											"uuid": "afc02a99-32cf-4df0-9e7f-e2969d1a16e9"
+										},
+										{
+											"key": "Certificate",
+											"value": "{{CertFoKlochDps}}",
+											"type": "text",
+											"uuid": "a64d5e00-81fe-4dac-8051-80fef18879c4"
+										},
+										{
+											"key": "MasterData",
+											"value": "{{PassFoKlochDps}}",
+											"type": "text",
+											"uuid": "1e60db41-8373-49ca-8a57-73b25a64ebf7"
+										},
+										{
+											"key": "Data",
+											"value": "{{KeyDataTov12Dir}}",
+											"type": "text",
+											"uuid": "9d6e63c2-c860-4841-811d-6bae2f8dbf91",
+											"disabled": true
+										},
+										{
+											"key": "Certificate",
+											"value": "{{CertTov12Dir}}",
+											"type": "text",
+											"uuid": "e76cb58e-c574-465a-9059-52f1a8ae6004",
+											"disabled": true
+										},
+										{
+											"key": "MasterData",
+											"value": "{{PassTov12Dir}}",
+											"type": "text",
+											"uuid": "fe85d2a8-39d8-4fa3-98b5-476eb518c48a",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"uuid": "5fe08ad4-f888-4a75-8dcc-8d35192df132",
+											"disabled": true
 										}
 									]
 								},
@@ -1345,7 +1394,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/FileDownload/VerifyDoc/{{IdSinedDoc}}",
+									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/VerifyDoc/{{IdSinedDoc}}",
 									"protocol": "https",
 									"host": [
 										"testaoweb",
@@ -1355,7 +1404,8 @@
 									],
 									"path": [
 										"aoweb.test.api.srvc",
-										"FileDownload",
+										"api",
+										"MobileServiceAPI",
 										"VerifyDoc",
 										"{{IdSinedDoc}}"
 									]
@@ -1399,8 +1449,25 @@
 										}
 									]
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "SignerId",
+											"value": "author_sign",
+											"type": "text",
+											"uuid": "b94059d4-cd94-43fc-a707-6be7d3fbc054"
+										},
+										{
+											"key": "IDDoc",
+											"value": "{{IdSinedDoc}}",
+											"type": "text",
+											"uuid": "9975989a-c8f0-4442-bc15-c768df3ff34a"
+										}
+									]
+								},
 								"url": {
 									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetCertInfo",
 									"protocol": "https",
