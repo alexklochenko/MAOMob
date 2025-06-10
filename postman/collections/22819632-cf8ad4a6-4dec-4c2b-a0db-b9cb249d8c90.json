@@ -1411,16 +1411,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/VerifyDoc/{{IdSinedDoc}}",
-									"protocol": "https",
+									"raw": "{{URL}}/api/MobileServiceAPI/VerifyDoc/{{IdSinedDoc}}",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.test.api.srvc",
 										"api",
 										"MobileServiceAPI",
 										"VerifyDoc",
