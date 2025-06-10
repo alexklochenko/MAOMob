@@ -901,7 +901,7 @@
 					"name": "Список документів",
 					"item": [
 						{
-							"name": "GetDocumentsList",
+							"name": "GetDocumentsList_18/5",
 							"event": [
 								{
 									"listen": "test",
@@ -928,6 +928,78 @@
 								}
 							],
 							"id": "22819632-e4911a43-7d36-408c-8ebf-469d7a9f2eca",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Tags\": null,\r\n    \"FilterId\": 18, //required параметер (дивись таблицю можливих значень нижче)\r\n    \"PackageId\": 0,\r\n    \"FilterPeriodId\": 5, //required параметер (дивись GetCommonInfo поле FilterPeriods а також збережені значення в профілі юзера GetCommonInfo UserConfigParams.SelectedFilterPeriod)\r\n    \"DocCode\": null,\r\n    \"PageSize\": 10,  //required параметер (max 100) (дивись збережені значення в профілі юзера GetCommonInfo UserConfigParams.ItemsByPage) \r\n    \"PageNumber\": 0,\r\n    \"SelectAll\": false,\r\n    \"FilterByContrCode\": null,\r\n    \"DocTypeId\": 0,\r\n    \"Sorting\": {\r\n        \"SortFieldName\": null,\r\n        \"SortOrder\": false\r\n    },\r\n    \"CounterMode\": 0,\r\n    \"IdDoc\": 0,\r\n    \"CreatedFromDate\": null,\r\n    \"CreatedFromDateStr\": \"\",\r\n    \"CreatedToDate\": null,\r\n    \"CreatedToDateStr\": \"\",\r\n    \"ShowConfirmedOnly\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetDocumentsList",
+									"protocol": "https",
+									"host": [
+										"testaoweb",
+										"art-office",
+										"com",
+										"ua"
+									],
+									"path": [
+										"aoweb.test.api.srvc",
+										"api",
+										"MobileServiceAPI",
+										"GetDocumentsList"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetDocumentsList_18/5 Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "56cee623-a153-41fd-bb97-6470edb760d3",
+										"exec": [
+											"pm.environment.set(\"IdSinedDoc\", \"\");\r",
+											"\r",
+											"try\r",
+											"{\r",
+											"var idDoc=pm.response.json().DocumentList[0].IDDoc;\r",
+											"pm.environment.set(\"IdSinedDoc\", idDoc);\r",
+											"}\r",
+											"catch(e)\r",
+											"{\r",
+											"    console.log(\"No docs in such period\")\r",
+											"}\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "22819632-d47d9246-39c4-49d3-b3cf-2ec9c01658d4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
