@@ -941,7 +941,7 @@
 							"response": []
 						},
 						{
-							"name": "GetDocumentsList Copy",
+							"name": "GetDocumentsList__(ForDeleteReqForDelete)",
 							"event": [
 								{
 									"listen": "test",
