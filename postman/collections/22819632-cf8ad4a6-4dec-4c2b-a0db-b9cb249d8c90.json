@@ -981,16 +981,11 @@
 									}
 								},
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetDocumentsList",
-									"protocol": "https",
+									"raw": "{{URL}}/api/MobileServiceAPI/GetDocumentsList",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.test.api.srvc",
 										"api",
 										"MobileServiceAPI",
 										"GetDocumentsList"
