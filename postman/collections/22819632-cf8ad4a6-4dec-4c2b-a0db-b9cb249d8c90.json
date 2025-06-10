@@ -1329,10 +1329,19 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
+										"id": "49cd6349-150f-4078-a62b-5388c1e575bc",
 										"exec": [
+											"var responseJson=pm.response.json();\r",
+											"var SignCount=responseJson.Signatures.length;\r",
+											"console.log(\"Count of sign - \"+SignCount);\r",
 											"\r",
-											""
+											"\r",
+											"\r",
+											"var SignerId=responseJson.Signatures[SignCount-3].Signer.Id;\r",
+											"pm.environment.set(\"SignerId\", SignerId);\r",
+											"console.log(\"Name of SignerId - \"+SignerId);\r",
+											"\r",
+											"// Щоб змінити SignerId який буде передаватись в метод  GetCertInfo, необхідно від загальної кількості підписів SignCount - відняти значення ([SignCount-1]) для того щоб індекс відповідав потрідному підпису. Врахуйте що індекса з нуля"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1386,7 +1395,14 @@
 									"script": {
 										"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
 										"exec": [
-											""
+											"pm.test(\"Chech Signer EDRPOU\", function()\r",
+											"{\r",
+											"    var Edrpou=pm.response.json().Edrpou;\r",
+											"    var expectedResult=pm.environment.get(\"ForTestSignerEdrpou\")\r",
+											"    pm.expect(Edrpou).to.eql(expectedResult);\r",
+											"\r",
+											"}\r",
+											")"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1415,7 +1431,7 @@
 									"urlencoded": [
 										{
 											"key": "SignerId",
-											"value": "author_sign",
+											"value": "{{SignerId}}",
 											"type": "text",
 											"uuid": "b94059d4-cd94-43fc-a707-6be7d3fbc054"
 										},
