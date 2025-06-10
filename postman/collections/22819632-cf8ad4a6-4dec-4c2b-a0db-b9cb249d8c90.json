@@ -22,8 +22,8 @@
 										"exec": [
 											"pm.environment.set(\"HasForSign\", \"\");\r",
 											"var responseJson;\r",
-											"responseJson = pm.response.json();\r",
-											"pm.environment.set(\"HasForSign\", responseJson.RawData);\r",
+											"responseJson = pm.response.json().RawData;\r",
+											"pm.environment.set(\"HasForSign\", responseJson);\r",
 											""
 										],
 										"type": "text/javascript",
@@ -51,16 +51,11 @@
 									}
 								},
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/AuthAPI/GetDataForAuth",
-									"protocol": "https",
+									"raw": "{{URL}}/api/AuthAPI/GetDataForAuth",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.test.api.srvc",
 										"api",
 										"AuthAPI",
 										"GetDataForAuth"
