@@ -396,16 +396,11 @@
 									]
 								},
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/AuthAPI/GetCommonInfo",
-									"protocol": "https",
+									"raw": "{{URL}}/api/AuthAPI/GetCommonInfo",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.test.api.srvc",
 										"api",
 										"AuthAPI",
 										"GetCommonInfo"
