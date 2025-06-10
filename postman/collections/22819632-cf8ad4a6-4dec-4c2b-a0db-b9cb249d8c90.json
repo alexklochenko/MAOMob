@@ -950,22 +950,14 @@
 										"exec": [
 											"pm.environment.set(\"IdSinedDoc\", \"\");\r",
 											"var DocumentList=pm.response.json().DocumentList;\r",
-											"var mass=[5,6,7,9,12,14,17,23,24,28,29,31];  // Односторнні види документів\r",
+											"\r",
 											"\r",
 											"try\r",
 											"{\r",
-											"    if (mass.includes(DocumentList[0].TypeId))\r",
-											"    {\r",
+											"\r",
 											"        var IDDoc=DocumentList[0].IDDoc;\r",
-											"        pm.environment.set(\"IdSinedDoc\", IDDoc);\r",
-											"        console.log(\"one part doc\"); \r",
-											"    }\r",
-											"    else\r",
-											"    {\r",
-											"    var IDDoc=DocumentList[0].IDDoc;\r",
-											"    pm.environment.set(\"IdSinedDoc\", IDDoc);\r",
-											"    console.log(\"Two side doc\");\r",
-											"    }\r",
+											"        pm.environment.set(\"IdDocForDeleteReqForDelete\", IDDoc);\r",
+											"   \r",
 											"}\r",
 											"\r",
 											"catch(e)\r",
@@ -999,7 +991,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Tags\": null,\r\n    \"FilterId\": {{FilterId}}, \r\n    \"PackageId\": 0,\r\n    \"FilterPeriodId\": {{FilterPeriodId}},\r\n    \"DocCode\": null,\r\n    \"PageSize\": {{PageSize}}, \r\n    \"PageNumber\": 0,\r\n    \"SelectAll\": false,\r\n    \"FilterByContrCode\": null,\r\n    \"DocTypeId\": 0,\r\n    \"Sorting\": {\r\n        \"SortFieldName\": \"{{SortFieldName}}\",\r\n        \"SortOrder\": false\r\n    },\r\n    \"CounterMode\": 0,\r\n    \"IdDoc\": 0,\r\n    \"CreatedFromDate\": null,\r\n    \"CreatedFromDateStr\": \"\",\r\n    \"CreatedToDate\": null,\r\n    \"CreatedToDateStr\": \"\",\r\n    \"ShowConfirmedOnly\": 0\r\n}",
+									"raw": "{\r\n    \"Tags\": null,\r\n    \"FilterId\": 30, \r\n    \"PackageId\": 0,\r\n    \"FilterPeriodId\": {{FilterPeriodId}},\r\n    \"DocCode\": null,\r\n    \"PageSize\": {{PageSize}}, \r\n    \"PageNumber\": 0,\r\n    \"SelectAll\": false,\r\n    \"FilterByContrCode\": null,\r\n    \"DocTypeId\": 0,\r\n    \"Sorting\": {\r\n        \"SortFieldName\": \"{{SortFieldName}}\",\r\n        \"SortOrder\": true\r\n    },\r\n    \"CounterMode\": 0,\r\n    \"IdDoc\": 0,\r\n    \"CreatedFromDate\": null,\r\n    \"CreatedFromDateStr\": \"\",\r\n    \"CreatedToDate\": null,\r\n    \"CreatedToDateStr\": \"\",\r\n    \"ShowConfirmedOnly\": 0\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
