@@ -1545,7 +1545,7 @@
 							"name": "Видалення запиту на видалення",
 							"item": [
 								{
-									"name": "GetDocById Copy",
+									"name": "DeleteReqForDelete",
 									"event": [
 										{
 											"listen": "test",
@@ -1578,7 +1578,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"IDDoc\":82555, //док \r\n\t\"FilterId\":30 //айді фільтра з якого відбуваєтсья виклик \r\n}",
+											"raw": "{\r\n    \"IDDoc\":{{IdDocForDeleteReqForDelete}}, //док \r\n\t\"FilterId\":30 //айді фільтра з якого відбуваєтсья виклик \r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
