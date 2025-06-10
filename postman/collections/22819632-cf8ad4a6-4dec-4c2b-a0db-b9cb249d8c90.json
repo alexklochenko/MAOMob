@@ -954,16 +954,11 @@
 									}
 								},
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetDocumentsList",
-									"protocol": "https",
+									"raw": "{{URL}}/api/MobileServiceAPI/GetDocumentsList",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.test.api.srvc",
 										"api",
 										"MobileServiceAPI",
 										"GetDocumentsList"
@@ -1411,22 +1406,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetDocById/{{IdSinedDoc}}/0/18",
-									"protocol": "https",
+									"raw": "{{URL}}/api/MobileServiceAPI/GetDocById/{{IdSinedDoc}}/0/{{FilterId}}",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.test.api.srvc",
 										"api",
 										"MobileServiceAPI",
 										"GetDocById",
 										"{{IdSinedDoc}}",
 										"0",
-										"18"
+										"{{FilterId}}"
 									]
 								}
 							},
