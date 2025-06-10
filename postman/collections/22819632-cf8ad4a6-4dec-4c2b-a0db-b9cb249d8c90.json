@@ -834,16 +834,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.dev.api.srvc/api/AuthAPI/GetVersion",
-									"protocol": "https",
+									"raw": "{{URL}}/api/AuthAPI/GetVersion",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.dev.api.srvc",
 										"api",
 										"AuthAPI",
 										"GetVersion"
