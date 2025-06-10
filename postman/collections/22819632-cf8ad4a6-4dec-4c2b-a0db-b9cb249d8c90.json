@@ -300,16 +300,11 @@
 									]
 								},
 								"url": {
-									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/AuthAPI/Authenticate",
-									"protocol": "https",
+									"raw": "{{URL}}/api/AuthAPI/Authenticate",
 									"host": [
-										"testaoweb",
-										"art-office",
-										"com",
-										"ua"
+										"{{URL}}"
 									],
 									"path": [
-										"aoweb.test.api.srvc",
 										"api",
 										"AuthAPI",
 										"Authenticate"
