@@ -861,7 +861,7 @@
 					"name": "Список документів",
 					"item": [
 						{
-							"name": "GetDocumentsList_18/5",
+							"name": "GetDocumentsList",
 							"event": [
 								{
 									"listen": "test",
