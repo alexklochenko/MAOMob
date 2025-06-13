@@ -1850,7 +1850,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"UserContext\": null,\r\n    \"DocumentSearchParams\": {\r\n        \"Id\": null,\r\n        \"CreatedFromDate\": null,\r\n        \"CreatedFromDateStr\": \"\",\r\n        \"CreatedToDate\": null,\r\n        \"CreatedToDateStr\": \"\",\r\n        \"IdSearchDocFilter\": 1, //Стан: Очікують підпис моєї організації\r\n        \"DocDirectionTypeId\": 0,\r\n        \"DocTypes\": null,\r\n        \"SignPolicies\": null,\r\n        \"MemberCode\": null,\r\n        \"IsSearchArchived\": 0,\r\n        \"IsSearchByYears\": 0,\r\n        \"AgreementNumber\": null,\r\n        \"DocNumber\": null,\r\n        \"DocDateFrom\": null,\r\n        \"DocDateFromStr\": \"\",\r\n        \"DocDateTo\": null,\r\n        \"DocDateToStr\": \"\",\r\n        \"SumSearchTypeId\": 1, //Сума: Не враховувати\r\n        \"Sum\": null,\r\n        \"AuthorUserId\": 0\r\n    },\r\n    \"SignStatesDictionary\": null,\r\n    \"DocStatesDictionary\": null,\r\n    \"DocUniStatesDictionary\": null,\r\n    \"DocDirectionTypesDictionary\": null,\r\n    \"DocTypesDictionary\": null,\r\n    \"StatesDictionary\": null,\r\n    \"SumSearchTypeDictionary\": null,\r\n    \"AcceptEmpListDictionary\": null,\r\n    \"EmployeesDictionary\": null\r\n}",
+											"raw": "{\r\n    \"DocumentId\":509119, //док до якого лінкуєм\r\n\t\"LinkedDocId\":509126, //док який лінкуєм \r\n\t\"LinkTypeId\":8 //тип лінку з довідника\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1858,14 +1858,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/api/MobileServiceAPI/SearchDocs",
+											"raw": "{{URL}}/api/MobileServiceAPI/DocsLinkAdd",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
 												"api",
 												"MobileServiceAPI",
-												"SearchDocs"
+												"DocsLinkAdd"
 											]
 										}
 									},
