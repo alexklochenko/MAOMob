@@ -1737,7 +1737,32 @@
 											"script": {
 												"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
 												"exec": [
-													""
+													"pm.test(\"Check Status\", function()\r",
+													"{\r",
+													"    pm.expect(pm.response.code).to.eql(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Check Time\", function()\r",
+													"{\r",
+													"    pm.expect(pm.response.responseTime).to.below(200);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Check Size\", function()\r",
+													"{\r",
+													"    pm.expect(pm.response.responseSize).to.below(850);\r",
+													"})\r",
+													"\r",
+													"pm.test(\"Check Propertys\", function()\r",
+													"{\r",
+													"    var jsonResalt=pm.response.json();\r",
+													"    pm.expect(jsonResalt[0].Name).to.equal(\"Є додатком до\");\r",
+													"        pm.expect(jsonResalt[1].Name).to.equal(\"Скасований документом\");\r",
+													"            pm.expect(jsonResalt[2].Name).to.equal(\"Пов'язаний з\");\r",
+													"                pm.expect(jsonResalt[3].Name).to.equal(\"Відповідь на\");\r",
+													"                    pm.expect(jsonResalt[4].Name).to.equal(\"Має додаток\");\r",
+													"                        pm.expect(jsonResalt[5].Name).to.equal(\"Скасовує документ\");\r",
+													"                            pm.expect(jsonResalt[6].Name).to.equal(\"Має відповідь\");   \r",
+													"})"
 												],
 												"type": "text/javascript",
 												"packages": {}
@@ -1763,7 +1788,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"UserContext\": null,\r\n    \"DocumentSearchParams\": {\r\n        \"Id\": null,\r\n        \"CreatedFromDate\": null,\r\n        \"CreatedFromDateStr\": \"\",\r\n        \"CreatedToDate\": null,\r\n        \"CreatedToDateStr\": \"\",\r\n        \"IdSearchDocFilter\": 1, //Стан: Очікують підпис моєї організації\r\n        \"DocDirectionTypeId\": 0,\r\n        \"DocTypes\": null,\r\n        \"SignPolicies\": null,\r\n        \"MemberCode\": null,\r\n        \"IsSearchArchived\": 0,\r\n        \"IsSearchByYears\": 0,\r\n        \"AgreementNumber\": null,\r\n        \"DocNumber\": null,\r\n        \"DocDateFrom\": null,\r\n        \"DocDateFromStr\": \"\",\r\n        \"DocDateTo\": null,\r\n        \"DocDateToStr\": \"\",\r\n        \"SumSearchTypeId\": 1, //Сума: Не враховувати\r\n        \"Sum\": null,\r\n        \"AuthorUserId\": 0\r\n    },\r\n    \"SignStatesDictionary\": null,\r\n    \"DocStatesDictionary\": null,\r\n    \"DocUniStatesDictionary\": null,\r\n    \"DocDirectionTypesDictionary\": null,\r\n    \"DocTypesDictionary\": null,\r\n    \"StatesDictionary\": null,\r\n    \"SumSearchTypeDictionary\": null,\r\n    \"AcceptEmpListDictionary\": null,\r\n    \"EmployeesDictionary\": null\r\n}",
+											"raw": "",
 											"options": {
 												"raw": {
 													"language": "json"
