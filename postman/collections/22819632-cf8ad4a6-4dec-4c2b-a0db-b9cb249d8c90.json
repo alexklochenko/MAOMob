@@ -1879,7 +1879,7 @@
 							"name": "Видалення лінка",
 							"item": [
 								{
-									"name": "SearchDocs Copy 3",
+									"name": "DocsLinkDelete",
 									"event": [
 										{
 											"listen": "test",
