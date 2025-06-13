@@ -1665,7 +1665,7 @@
 							"response": []
 						},
 						{
-							"name": "InitSearchDocs Copy",
+							"name": "SearchDocs",
 							"event": [
 								{
 									"listen": "test",
