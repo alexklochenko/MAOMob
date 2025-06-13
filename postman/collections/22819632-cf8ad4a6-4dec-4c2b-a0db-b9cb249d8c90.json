@@ -1759,7 +1759,7 @@
 												}
 											]
 										},
-										"method": "POST",
+										"method": "GET",
 										"header": [],
 										"body": {
 											"mode": "raw",
@@ -1771,14 +1771,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/api/MobileServiceAPI/SearchDocs",
+											"raw": "{{URL}}/api/MobileServiceAPI/InitLinksModel",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
 												"api",
 												"MobileServiceAPI",
-												"SearchDocs"
+												"InitLinksModel"
 											]
 										}
 									},
