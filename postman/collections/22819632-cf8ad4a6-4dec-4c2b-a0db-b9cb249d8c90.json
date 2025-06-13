@@ -1728,63 +1728,64 @@
 					"item": [
 						{
 							"name": "Довідник типів лінків для документів",
-							"item": [],
-							"id": "22819632-20073bdd-bebe-4a8d-8d15-9ab59a45b410"
-						},
-						{
-							"name": "SearchDocs Copy",
-							"event": [
+							"item": [
 								{
-									"listen": "test",
-									"script": {
-										"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
-										"exec": [
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
+									"name": "SearchDocs Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"id": "22819632-66789b6e-9f0b-47c0-99f9-9537d469a976",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"UserContext\": null,\r\n    \"DocumentSearchParams\": {\r\n        \"Id\": null,\r\n        \"CreatedFromDate\": null,\r\n        \"CreatedFromDateStr\": \"\",\r\n        \"CreatedToDate\": null,\r\n        \"CreatedToDateStr\": \"\",\r\n        \"IdSearchDocFilter\": 1, //Стан: Очікують підпис моєї організації\r\n        \"DocDirectionTypeId\": 0,\r\n        \"DocTypes\": null,\r\n        \"SignPolicies\": null,\r\n        \"MemberCode\": null,\r\n        \"IsSearchArchived\": 0,\r\n        \"IsSearchByYears\": 0,\r\n        \"AgreementNumber\": null,\r\n        \"DocNumber\": null,\r\n        \"DocDateFrom\": null,\r\n        \"DocDateFromStr\": \"\",\r\n        \"DocDateTo\": null,\r\n        \"DocDateToStr\": \"\",\r\n        \"SumSearchTypeId\": 1, //Сума: Не враховувати\r\n        \"Sum\": null,\r\n        \"AuthorUserId\": 0\r\n    },\r\n    \"SignStatesDictionary\": null,\r\n    \"DocStatesDictionary\": null,\r\n    \"DocUniStatesDictionary\": null,\r\n    \"DocDirectionTypesDictionary\": null,\r\n    \"DocTypesDictionary\": null,\r\n    \"StatesDictionary\": null,\r\n    \"SumSearchTypeDictionary\": null,\r\n    \"AcceptEmpListDictionary\": null,\r\n    \"EmployeesDictionary\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/MobileServiceAPI/SearchDocs",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"SearchDocs"
+											]
+										}
+									},
+									"response": []
 								}
 							],
-							"id": "22819632-66789b6e-9f0b-47c0-99f9-9537d469a976",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{AccessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"UserContext\": null,\r\n    \"DocumentSearchParams\": {\r\n        \"Id\": null,\r\n        \"CreatedFromDate\": null,\r\n        \"CreatedFromDateStr\": \"\",\r\n        \"CreatedToDate\": null,\r\n        \"CreatedToDateStr\": \"\",\r\n        \"IdSearchDocFilter\": 1, //Стан: Очікують підпис моєї організації\r\n        \"DocDirectionTypeId\": 0,\r\n        \"DocTypes\": null,\r\n        \"SignPolicies\": null,\r\n        \"MemberCode\": null,\r\n        \"IsSearchArchived\": 0,\r\n        \"IsSearchByYears\": 0,\r\n        \"AgreementNumber\": null,\r\n        \"DocNumber\": null,\r\n        \"DocDateFrom\": null,\r\n        \"DocDateFromStr\": \"\",\r\n        \"DocDateTo\": null,\r\n        \"DocDateToStr\": \"\",\r\n        \"SumSearchTypeId\": 1, //Сума: Не враховувати\r\n        \"Sum\": null,\r\n        \"AuthorUserId\": 0\r\n    },\r\n    \"SignStatesDictionary\": null,\r\n    \"DocStatesDictionary\": null,\r\n    \"DocUniStatesDictionary\": null,\r\n    \"DocDirectionTypesDictionary\": null,\r\n    \"DocTypesDictionary\": null,\r\n    \"StatesDictionary\": null,\r\n    \"SumSearchTypeDictionary\": null,\r\n    \"AcceptEmpListDictionary\": null,\r\n    \"EmployeesDictionary\": null\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/MobileServiceAPI/SearchDocs",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"MobileServiceAPI",
-										"SearchDocs"
-									]
-								}
-							},
-							"response": []
+							"id": "22819632-20073bdd-bebe-4a8d-8d15-9ab59a45b410"
 						}
 					],
 					"id": "22819632-34bcbd1b-839c-47b2-86ac-726898c76573"
