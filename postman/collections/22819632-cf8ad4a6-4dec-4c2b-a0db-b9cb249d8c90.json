@@ -1817,7 +1817,7 @@
 							"name": "Додавання лінка до документа",
 							"item": [
 								{
-									"name": "SearchDocs Copy 2",
+									"name": "DocsLinkAdd",
 									"event": [
 										{
 											"listen": "test",
