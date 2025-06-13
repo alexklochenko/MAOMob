@@ -1663,6 +1663,61 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "InitSearchDocs Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c37ab720-9934-40fc-b3f5-da0b84d0e639",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "22819632-1d50914b-157e-44c3-baea-40d1eb3f3e66",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"IDDoc\":{{IdDocForDeleteReqForDelete}}, //док \r\n\t\"FilterId\":30 //айді фільтра з якого відбуваєтсья виклик \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/MobileServiceAPI/DeleteReqForDelete",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"MobileServiceAPI",
+										"DeleteReqForDelete"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "22819632-5ad4ecaa-f907-4520-a661-982ab90b46f3"
