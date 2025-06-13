@@ -1730,7 +1730,7 @@
 							"name": "Довідник типів лінків для документів",
 							"item": [
 								{
-									"name": "SearchDocs Copy",
+									"name": "InitLinksModel",
 									"event": [
 										{
 											"listen": "test",
