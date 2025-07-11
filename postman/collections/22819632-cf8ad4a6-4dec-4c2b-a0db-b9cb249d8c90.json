@@ -43,7 +43,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"MobileAppName\": \"test\",\r\n    \"MobileAppVersion\": \"test\",\r\n    \"MobileOsName\": \"test\",\r\n    \"MobileOsVersion\": \"test\",\r\n    \"MobileDeviceName \": \"test\",\r\n    \"MobileDeviceModel\": \"test\",\r\n    \"MobileDeviceType\": \"test\",\r\n    \"MobileDeviceId\": \"test\",\r\n    \"MobileDeviceManufacturer \": \"test\",\r\n    \"MobileDeviceSerial\": \"test\",\r\n    \"MobileDeviceIMEI  \": \"test\",\r\n    \"MobileDeviceIMSI\": \"test\",\r\n    \"MobileDevicePhoneNumber \": \"test\",\r\n    \"MobileDeviceMacAddress \": \"test\",\r\n    \"MobileDeviceUUID \": \"test\"\r\n}",
+									"raw": "{\r\n    \"MobileAppName\": \"test\",\r\n    \"MobileAppVersion\": \"1.0.0\",\r\n    \"MobileOsName\": \"test\",\r\n    \"MobileOsVersion\": \"test\",\r\n    \"MobileDeviceName \": \"test\",\r\n    \"MobileDeviceModel\": \"test\",\r\n    \"MobileDeviceType\": \"test\",\r\n    \"MobileDeviceId\": \"test\",\r\n    \"MobileDeviceManufacturer \": \"test\",\r\n    \"MobileDeviceSerial\": \"test\",\r\n    \"MobileDeviceIMEI  \": \"test\",\r\n    \"MobileDeviceIMSI\": \"test\",\r\n    \"MobileDevicePhoneNumber \": \"test\",\r\n    \"MobileDeviceMacAddress \": \"test\",\r\n    \"MobileDeviceUUID \": \"test\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
