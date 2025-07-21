@@ -2015,8 +2015,37 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "IDDoc",
+											"value": "{{IdSinedDoc}}",
+											"type": "text",
+											"uuid": "fdfc1b99-9700-4452-a64f-2f727adab601"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/MobileServiceAPI/DeleteDocument?=",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"MobileServiceAPI",
+										"DeleteDocument"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								}
 							},
 							"response": []
 						}
