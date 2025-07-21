@@ -1953,6 +1953,18 @@
 								"header": []
 							},
 							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "22819632-44a0c4b5-b9f8-472b-9921-019e36bdc690",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "22819632-eabc7d46-8f10-4403-af86-a1718639bf00"
