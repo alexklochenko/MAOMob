@@ -2036,16 +2036,26 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
-									"mode": "formdata",
-									"formdata": [
+									"mode": "urlencoded",
+									"urlencoded": [
 										{
 											"key": "IDDoc",
-											"value": "{{IdSinedDoc}}",
+											"value": "509977",
 											"type": "text",
-											"uuid": "fdfc1b99-9700-4452-a64f-2f727adab601"
+											"uuid": "4fdc9ec7-a6ca-4c72-8b9a-0938cdb57ddc"
 										}
 									]
 								},
@@ -2062,8 +2072,7 @@
 									"query": [
 										{
 											"key": "",
-											"value": "",
-											"type": "text"
+											"value": ""
 										}
 									]
 								}
