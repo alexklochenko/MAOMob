@@ -1943,28 +1943,34 @@
 					"name": "Історія дій з документом",
 					"item": [
 						{
-							"name": "GetDocumentHistory",
-							"id": "22819632-d156d3d9-1477-4e56-9285-ed0802c52bd5",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
-						},
-						{
-							"name": "New Request",
-							"id": "22819632-44a0c4b5-b9f8-472b-9921-019e36bdc690",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
+							"name": "New Folder",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-2fab1b0c-b28b-4ed2-9cbf-d172e24a2a9e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								},
+								{
+									"name": "GetDocumentHistory",
+									"id": "22819632-d156d3d9-1477-4e56-9285-ed0802c52bd5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
+							"id": "22819632-3786fdf6-540a-4e17-a61e-2ea06418973e"
 						}
 					],
 					"id": "22819632-eabc7d46-8f10-4403-af86-a1718639bf00"
