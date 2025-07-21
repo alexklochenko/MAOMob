@@ -2009,7 +2009,7 @@
 					"name": "Видалення документа",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "DeleteDocument",
 							"id": "22819632-e3d00aa5-4d3d-466f-9606-b2fabdafb991",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
