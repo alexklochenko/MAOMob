@@ -1993,8 +1993,29 @@
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/FileDownload/GetDocActionsHistoryPdf/{{IdSinedDoc}}",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"FileDownload",
+												"GetDocActionsHistoryPdf",
+												"{{IdSinedDoc}}"
+											]
+										}
 									},
 									"response": []
 								}
