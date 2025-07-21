@@ -1940,8 +1940,21 @@
 					"id": "22819632-34bcbd1b-839c-47b2-86ac-726898c76573"
 				},
 				{
-					"name": "New Folder",
-					"item": [],
+					"name": "Історія дій з документом",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "22819632-d156d3d9-1477-4e56-9285-ed0802c52bd5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "22819632-eabc7d46-8f10-4403-af86-a1718639bf00"
 				},
 				{
