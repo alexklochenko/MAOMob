@@ -1964,7 +1964,7 @@
 							"name": "Скачування історії дій з документом",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GetDocActionsHistoryPdf",
 									"id": "22819632-90a12600-49b7-4174-b97f-e4e34c512ed7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
