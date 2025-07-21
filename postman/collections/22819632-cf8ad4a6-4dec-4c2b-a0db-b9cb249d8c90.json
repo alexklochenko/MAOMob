@@ -1607,7 +1607,7 @@
 							"name": "Підтвердження запиту на видалення",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "ConfirmReqForDelete",
 									"id": "22819632-8ee81670-bf84-48be-af3f-227f678db48e",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
