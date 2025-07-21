@@ -2006,6 +2006,11 @@
 					"id": "22819632-eabc7d46-8f10-4403-af86-a1718639bf00"
 				},
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "22819632-8d4e5c21-71d5-4e25-a410-169b62caa212"
+				},
+				{
 					"name": "GetVersion",
 					"id": "22819632-8d0990ca-6fc4-4ed7-8c5a-e358a142a436",
 					"protocolProfileBehavior": {
