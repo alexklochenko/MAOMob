@@ -1943,7 +1943,7 @@
 					"name": "Історія дій з документом",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "GetDocumentHistory",
 							"id": "22819632-d156d3d9-1477-4e56-9285-ed0802c52bd5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
