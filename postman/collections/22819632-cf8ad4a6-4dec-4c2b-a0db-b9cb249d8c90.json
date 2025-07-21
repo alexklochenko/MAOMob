@@ -1940,6 +1940,11 @@
 					"id": "22819632-34bcbd1b-839c-47b2-86ac-726898c76573"
 				},
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "22819632-eabc7d46-8f10-4403-af86-a1718639bf00"
+				},
+				{
 					"name": "GetVersion",
 					"id": "22819632-8d0990ca-6fc4-4ed7-8c5a-e358a142a436",
 					"protocolProfileBehavior": {
