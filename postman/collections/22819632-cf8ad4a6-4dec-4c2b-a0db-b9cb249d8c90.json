@@ -1961,8 +1961,21 @@
 							"id": "22819632-3786fdf6-540a-4e17-a61e-2ea06418973e"
 						},
 						{
-							"name": "New Folder",
-							"item": [],
+							"name": "Скачування історії дій з документом",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-90a12600-49b7-4174-b97f-e4e34c512ed7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "22819632-e3c3a4b5-57da-4692-b226-703153a62f5f"
 						}
 					],
