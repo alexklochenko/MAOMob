@@ -1946,18 +1946,6 @@
 							"name": "New Folder",
 							"item": [
 								{
-									"name": "New Request",
-									"id": "22819632-2fab1b0c-b28b-4ed2-9cbf-d172e24a2a9e",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
-									},
-									"response": []
-								},
-								{
 									"name": "GetDocumentHistory",
 									"id": "22819632-d156d3d9-1477-4e56-9285-ed0802c52bd5",
 									"protocolProfileBehavior": {
