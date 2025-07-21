@@ -1943,7 +1943,7 @@
 					"name": "Історія дій з документом",
 					"item": [
 						{
-							"name": "New Folder",
+							"name": "Отримати історію дій з документом",
 							"item": [
 								{
 									"name": "GetDocumentHistory",
