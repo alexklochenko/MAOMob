@@ -1613,8 +1613,46 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "IDDoc",
+													"value": "507847",
+													"type": "text",
+													"uuid": "8d7a53a2-9ae6-41c2-b1a7-3f329570d1fa"
+												},
+												{
+													"key": "FilterId",
+													"value": "30",
+													"type": "text",
+													"uuid": "2ee5f64a-4b69-42bb-93aa-bc40e8182b18"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/api/MobileServiceAPI/ConfirmReqForDelete",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"ConfirmReqForDelete"
+											]
+										}
 									},
 									"response": []
 								}
