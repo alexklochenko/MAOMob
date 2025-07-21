@@ -1670,8 +1670,52 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "IDDoc",
+													"value": "487676",
+													"type": "text",
+													"uuid": "78f0e896-a217-4db3-8102-d477f70ceb19"
+												},
+												{
+													"key": "CauseState",
+													"value": "ApiPostmanTesting",
+													"type": "text",
+													"uuid": "8c2e4c79-fb3a-4bce-8919-f7760aaa68a3"
+												},
+												{
+													"key": "FilterId",
+													"value": "30",
+													"type": "text",
+													"uuid": "6d0a81d4-6261-48ad-bb52-4edab0a7b797"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/api/MobileServiceAPI/DeclineReqForDelete",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"DeclineReqForDelete"
+											]
+										}
 									},
 									"response": []
 								}
