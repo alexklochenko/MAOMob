@@ -2292,31 +2292,37 @@
 				},
 				{
 					"name": "GetVersion",
-					"id": "22819632-8d0990ca-6fc4-4ed7-8c5a-e358a142a436",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetVersion",
-							"protocol": "https",
-							"host": [
-								"testaoweb",
-								"art-office",
-								"com",
-								"ua"
-							],
-							"path": [
-								"aoweb.test.api.srvc",
-								"api",
-								"MobileServiceAPI",
-								"GetVersion"
-							]
+					"item": [
+						{
+							"name": "GetVersion",
+							"id": "22819632-8d0990ca-6fc4-4ed7-8c5a-e358a142a436",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://testaoweb.art-office.com.ua/aoweb.test.api.srvc/api/MobileServiceAPI/GetVersion",
+									"protocol": "https",
+									"host": [
+										"testaoweb",
+										"art-office",
+										"com",
+										"ua"
+									],
+									"path": [
+										"aoweb.test.api.srvc",
+										"api",
+										"MobileServiceAPI",
+										"GetVersion"
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"id": "22819632-d1a78a70-73fe-492e-a8f8-7b5039737ef7"
 				}
 			],
 			"id": "22819632-49dca928-a0cc-4e78-8ece-7d72de96fd11"
