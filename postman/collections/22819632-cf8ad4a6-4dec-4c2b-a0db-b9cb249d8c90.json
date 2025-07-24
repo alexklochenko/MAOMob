@@ -2341,16 +2341,37 @@
 												}
 											]
 										},
-										"method": "GET",
+										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "raw",
-											"raw": "{\r\n    \"DocumentId\":{{NewOneSideDoc}}, //док який шарим\r\n\t\"ShareTypeId\":{{SharaSubjectTypeFopYo}}, //тип контрагента 2 ФО та 3 для ФОП та ЮО\r\n\t\"Ipn\": \"\", //код ДРФО, обовязковий якщо ФО\r\n\t\"Edrpou\": {{RundomUserFOP}} //код ЄДРПОУ, обовязковий якщо ФОП/ЮО\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "DocumentId",
+													"value": "{{NewOneSideDoc}}",
+													"type": "text",
+													"uuid": "0f7b7520-6940-4efd-b3d4-0e8a623cee1c"
+												},
+												{
+													"key": "ShareTypeId",
+													"value": "{{SharaSubjectTypeFopYo}}",
+													"type": "text",
+													"uuid": "c0717f05-b17d-4459-95a2-ef278bc874eb"
+												},
+												{
+													"key": "Ipn",
+													"value": "",
+													"type": "text",
+													"uuid": "3f389b56-0241-43f3-8bb5-24e9d1273ca9",
+													"disabled": true
+												},
+												{
+													"key": "Edrpou",
+													"value": "3196210073",
+													"type": "text",
+													"uuid": "5f23cbe9-06b8-45ba-820b-5f9b19f8bad6"
 												}
-											}
+											]
 										},
 										"url": {
 											"raw": "{{URL}}/api/MobileServiceAPI/ShareDoc",
