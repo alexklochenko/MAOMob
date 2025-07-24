@@ -2172,15 +2172,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{URL}}/ api/MobileServiceAPI/InitSharingModel/{{IdSinedDoc}}",
+											"raw": "{{URL}}/api/MobileServiceAPI/InitSharingModel/{{NewOneSideDoc}}",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
-												" api",
+												"api",
 												"MobileServiceAPI",
 												"InitSharingModel",
-												"{{IdSinedDoc}}"
+												"{{NewOneSideDoc}}"
 											]
 										}
 									},
