@@ -2126,14 +2126,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{URL}}/FileDownload/GetDocActionsHistoryPdf/{{IdSinedDoc}}",
+											"raw": "{{URL}}/FileDownload/GetDocActionsHistoryPdf/{{NewOneSideDoç}}",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
 												"FileDownload",
 												"GetDocActionsHistoryPdf",
-												"{{IdSinedDoc}}"
+												"{{NewOneSideDoç}}"
 											]
 										}
 									},
