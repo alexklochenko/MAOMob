@@ -2325,14 +2325,44 @@
 							"name": "Додавання шарінга до документа",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "ShareDoc",
 									"id": "22819632-5d59d790-21a7-4cec-9998-326cc5805c05",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
 										"method": "GET",
-										"header": []
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"DocumentId\":{{NewOneSideDoc}}, //док який шарим\r\n\t\"ShareTypeId\":{{SharaSubjectTypeFopYo}}, //тип контрагента 2 ФО та 3 для ФОП та ЮО\r\n\t\"Ipn\": \"\", //код ДРФО, обовязковий якщо ФО\r\n\t\"Edrpou\": {{RundomUserFOP}} //код ЄДРПОУ, обовязковий якщо ФОП/ЮО\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/MobileServiceAPI/ShareDoc",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"ShareDoc"
+											]
+										}
 									},
 									"response": []
 								}
