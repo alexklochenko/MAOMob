@@ -2151,7 +2151,20 @@
 					"item": [
 						{
 							"name": "Створення доступу на перегляд",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-3d170187-62fc-4d07-9fb3-268a4a16f6a9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "22819632-23fe9e1d-dbca-4ee8-961f-92f07b7fa58f"
 						},
 						{
