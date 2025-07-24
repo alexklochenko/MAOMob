@@ -2192,7 +2192,20 @@
 						},
 						{
 							"name": "Вичитка списку контрагентів для шарінга",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-642d6966-df71-4dd2-991c-1415a81f7b48",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "22819632-b76fd42f-56b7-4652-abbf-8c4d4e0c1b40"
 						}
 					],
