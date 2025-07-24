@@ -2389,6 +2389,24 @@
 								}
 							],
 							"id": "22819632-8a4b06a2-1770-49a2-8ec5-70cbbf33347a"
+						},
+						{
+							"name": "Видалення шарінга з документа",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-2b2d0a19-9ab5-4eea-9107-3102f6ddc5b9",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
+							"id": "22819632-2e9811df-8465-4afc-9042-5e5c727719c7"
 						}
 					],
 					"id": "22819632-51671d94-03df-43eb-ac91-69fa7137826e"
