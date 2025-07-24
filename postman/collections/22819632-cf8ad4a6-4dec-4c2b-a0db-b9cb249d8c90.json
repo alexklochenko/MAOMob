@@ -2394,14 +2394,22 @@
 							"name": "Видалення шарінга з документа",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "DeleteShareDoc",
 									"id": "22819632-2b2d0a19-9ab5-4eea-9107-3102f6ddc5b9",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": "/api/MobileServiceAPI/DeleteShareDoc",
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"DeleteShareDoc"
+											]
+										}
 									},
 									"response": []
 								}
