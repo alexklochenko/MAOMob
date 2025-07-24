@@ -2213,15 +2213,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{URL}}/api/MobileServiceAPI/InitSharingModel/{{NewOneSideDoc}}",
+											"raw": "{{URL}}/api/MobileServiceAPI/ContragentsList",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
 												"api",
 												"MobileServiceAPI",
-												"InitSharingModel",
-												"{{NewOneSideDoc}}"
+												"ContragentsList"
 											]
 										}
 									},
