@@ -2194,7 +2194,7 @@
 							"name": "Вичитка списку контрагентів для шарінга",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "ContragentsList",
 									"id": "22819632-642d6966-df71-4dd2-991c-1415a81f7b48",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
