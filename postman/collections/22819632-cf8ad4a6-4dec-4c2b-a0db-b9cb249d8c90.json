@@ -2565,7 +2565,7 @@
 					"name": "Відхилення документа",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "DeclineDoc",
 							"id": "22819632-42d678c7-b173-4412-8384-0f0ef153b10f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
