@@ -1776,8 +1776,21 @@
 							"id": "22819632-c7a92ff8-4a9a-43fc-a5b7-cdb83afa2ea0"
 						},
 						{
-							"name": "New Folder",
-							"item": [],
+							"name": "Перегляд запиту на видалення",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-4c9fd1af-be20-43f1-be4b-3620ec6408d5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "22819632-028cbc2d-af08-43ae-82d7-5ffadfaf1798"
 						}
 					],
