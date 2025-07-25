@@ -2253,7 +2253,10 @@
 												"exec": [
 													"var jsonData=pm.response.json();\r",
 													"var DocShareItems=jsonData.DocShareItems[1];\r",
-													"console.log(DocShareItems.Id)"
+													"console.log(DocShareItems.Id)\r",
+													"\r",
+													"\r",
+													""
 												],
 												"type": "text/javascript",
 												"packages": {}
@@ -2500,7 +2503,20 @@
 				},
 				{
 					"name": "Опублікувати документ",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "22819632-2a2bf679-3dcc-471f-9683-557737ade9cf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "22819632-1e4e79e3-df92-4ef2-b37e-9f113e1fac4c"
 				}
 			],
