@@ -1762,6 +1762,19 @@
 							"item": [
 								{
 									"name": "CreateReqForDelete",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "b57e0a7c-3495-4653-8ff4-00ecf884bc6f",
+												"exec": [
+													"pm.environment.set(\"IdDocWithReqForDelete\",pm.response.json().IDDoc);"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
 									"id": "22819632-c8af66d2-434f-4e7b-9977-c63691439f09",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
