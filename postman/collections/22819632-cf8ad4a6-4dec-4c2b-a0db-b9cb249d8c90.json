@@ -2812,7 +2812,7 @@
 											"script": {
 												"id": "9d25c1fb-6725-4475-87b5-5b64c395e755",
 												"exec": [
-													"var IdDocsArrayWithComments=pm.response.json().Model;\r",
+													"var IdDocWithComments=pm.response.json().Model;\r",
 													"pm.environment.set(\"IdDocsArrayWithComments\",IdDocsArrayWithComments);"
 												],
 												"type": "text/javascript",
@@ -2869,13 +2869,70 @@
 							"item": [
 								{
 									"name": "New Request",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "543430d9-349f-4569-bbb5-32f9dc001ce5",
+												"exec": [
+													"var IdDocWithComments=pm.environment.get(\"IdDocsArrayWithComments\")[0];\r",
+													"pm.environment.set(\"IdDocWithComments\",IdDocWithComments);"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "2c80240e-a30a-4b36-a28e-e9ebb5102a54",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
 									"id": "22819632-6ffc3b66-763e-4466-b8bb-e46099f9a3b8",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Id",
+													"value": "{{IdDocWithComments}}",
+													"type": "text",
+													"uuid": "105f0178-9b49-46f1-a9ac-1f5534ffae3d"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/api/MobileServiceAPI/SearchComments",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"SearchComments"
+											]
+										}
 									},
 									"response": []
 								}
