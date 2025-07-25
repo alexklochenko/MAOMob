@@ -1761,7 +1761,7 @@
 							"name": "Створення запиту на видалення",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "CreateReqForDelete",
 									"id": "22819632-c8af66d2-434f-4e7b-9977-c63691439f09",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
