@@ -2802,21 +2802,22 @@
 					"name": "Коментарі",
 					"item": [
 						{
-							"name": "New Folder",
-							"item": [],
+							"name": "Створення коментаря",
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-4187a7ad-0623-41d6-80c5-cd29818f41b6",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "22819632-52e76832-a765-4522-86c6-81f435f48446"
-						},
-						{
-							"name": "New Request",
-							"id": "22819632-4187a7ad-0623-41d6-80c5-cd29818f41b6",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
 						}
 					],
 					"id": "22819632-7e409e53-4802-41b9-b600-3def35c7600c"
