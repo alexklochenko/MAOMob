@@ -2912,15 +2912,13 @@
 										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "Id",
-													"value": "{{IdDocWithComments}}",
-													"type": "text",
-													"uuid": "105f0178-9b49-46f1-a9ac-1f5534ffae3d"
+											"mode": "raw",
+											"raw": "{\r\n\"Model\": [ {{IdDocForComment_1}}]\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
 												}
-											]
+											}
 										},
 										"url": {
 											"raw": "{{URL}}/api/MobileServiceAPI/SearchComments",
