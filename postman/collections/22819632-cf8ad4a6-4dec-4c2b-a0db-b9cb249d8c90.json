@@ -2588,8 +2588,29 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/MobileServiceAPI/GetUserFilterInfo",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"MobileServiceAPI",
+										"GetUserFilterInfo"
+									]
+								}
 							},
 							"response": []
 						}
@@ -2602,13 +2623,67 @@
 					"item": [
 						{
 							"name": "DeclineDoc",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1721a33d-269f-4bbe-b817-48d9f6366e3c",
+										"exec": [
+											"var jssonData=pm.response.json();\r",
+											"var IdDeclineDoc=jssonData.IDDoc;\r",
+											"\r",
+											"pm.environment.set(\"IdDeclineDoc\", IdDeclineDoc);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "22819632-42d678c7-b173-4412-8384-0f0ef153b10f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "IDDoc",
+											"value": "{{NewOneSideDoc}}",
+											"type": "text",
+											"uuid": "a4435790-10d0-460c-aeb6-6e7e2e4d575c"
+										},
+										{
+											"key": "CauseState",
+											"value": "{{CauseState}}",
+											"type": "text",
+											"uuid": "6520b0ab-d37f-4787-9126-4896c65d4ee4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/MobileServiceAPI/DeclineDoc",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"MobileServiceAPI",
+										"DeclineDoc"
+									]
+								}
 							},
 							"response": []
 						}
