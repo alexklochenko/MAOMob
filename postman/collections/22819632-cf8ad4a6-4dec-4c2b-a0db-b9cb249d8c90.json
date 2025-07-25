@@ -2852,7 +2852,20 @@
 						},
 						{
 							"name": "Перегляд коментаря",
-							"item": [],
+							"item": [
+								{
+									"name": "New Request",
+									"id": "22819632-6ffc3b66-763e-4466-b8bb-e46099f9a3b8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							],
 							"id": "22819632-aef462ff-e6d2-45c4-8e7c-e221366153b7"
 						}
 					],
