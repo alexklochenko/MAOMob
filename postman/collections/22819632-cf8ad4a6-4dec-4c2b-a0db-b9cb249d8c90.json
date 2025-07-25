@@ -2811,8 +2811,38 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\"Model\": [ {{IdDocForComment_1}},{{IdDocForComment_2}}],\r\n\"Comment\":\"Коментар додано при тестуванні API Постман\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/MobileServiceAPI/CommentDocumentList",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"CommentDocumentList"
+											]
+										}
 									},
 									"response": []
 								}
