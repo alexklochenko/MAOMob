@@ -2245,6 +2245,21 @@
 							"item": [
 								{
 									"name": "InitSharingModel",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "6051aeed-a9c4-475b-beb8-8f808ab90458",
+												"exec": [
+													"var jsonData=pm.response.json();\r",
+													"var DocShareItems=jsonData.DocShareItems[1];\r",
+													"console.log(DocShareItems.Id)"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
 									"id": "22819632-3d170187-62fc-4d07-9fb3-268a4a16f6a9",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -2326,6 +2341,37 @@
 							"item": [
 								{
 									"name": "ShareDoc",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "16af212c-cb30-4e65-a44f-da614072bfb7",
+												"exec": [
+													"pm.environment.get(\"RundomUserYO\");\r",
+													"console.log(pm.environment.get(\"RundomUserYO\"));\r",
+													"var newRundomUserYO=parseInt(pm.environment.get(\"RundomUserYO\"))+1;\r",
+													"pm.environment.set(\"RundomUserYO\", newRundomUserYO)"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "c63d867d-3ba6-4914-9c85-952682557a41",
+												"exec": [
+													"var jsonRespone=pm.response.json();\r",
+													"var SharaId=jsonRespone.Id;\r",
+													"pm.environment.set(\"SharaId\", SharaId);\r",
+													"// console.log(SharaId)\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
 									"id": "22819632-5d59d790-21a7-4cec-9998-326cc5805c05",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -2367,7 +2413,7 @@
 												},
 												{
 													"key": "Edrpou",
-													"value": "3196210073",
+													"value": "{{RundomUserYO}}",
 													"type": "text",
 													"uuid": "5f23cbe9-06b8-45ba-820b-5f9b19f8bad6"
 												}
@@ -2400,10 +2446,41 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
 										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Id",
+													"value": "{{SharaId}}",
+													"type": "text",
+													"uuid": "5cff781b-560f-46d6-84d8-2f437967c933",
+													"disabled": true
+												},
+												{
+													"key": "Id",
+													"value": "971173",
+													"type": "text",
+													"uuid": "f6e266aa-7e50-47db-843a-160189d99655"
+												}
+											]
+										},
 										"url": {
-											"raw": "/api/MobileServiceAPI/DeleteShareDoc",
+											"raw": "{{URL}}/api/MobileServiceAPI/DeleteShareDoc",
+											"host": [
+												"{{URL}}"
+											],
 											"path": [
 												"api",
 												"MobileServiceAPI",
