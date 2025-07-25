@@ -2805,7 +2805,7 @@
 							"name": "Створення коментаря",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "CommentDocumentList",
 									"id": "22819632-4187a7ad-0623-41d6-80c5-cd29818f41b6",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
