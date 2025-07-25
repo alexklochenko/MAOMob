@@ -2800,11 +2800,24 @@
 				},
 				{
 					"name": "Коментарі",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "22819632-4187a7ad-0623-41d6-80c5-cd29818f41b6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "22819632-7e409e53-4802-41b9-b600-3def35c7600c"
 				},
 				{
-					"name": "New Folder",
+					"name": "Теги",
 					"item": [],
 					"id": "22819632-995e6dd4-51e8-47eb-a626-e690624c6bd4"
 				}
