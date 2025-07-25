@@ -2912,13 +2912,22 @@
 										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "raw",
-											"raw": "{\r\n\"Model\": [ {{IdDocForComment_1}}]\r\n\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Id",
+													"value": "510037",
+													"type": "text",
+													"uuid": "105f0178-9b49-46f1-a9ac-1f5534ffae3d"
+												},
+												{
+													"key": "InsDate",
+													"value": "",
+													"type": "text",
+													"uuid": "435330c6-7e7d-4008-8df9-52352fc05f5a",
+													"disabled": true
 												}
-											}
+											]
 										},
 										"url": {
 											"raw": "{{URL}}/api/MobileServiceAPI/SearchComments",
