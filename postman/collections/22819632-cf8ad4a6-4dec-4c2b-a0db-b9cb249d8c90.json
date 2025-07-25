@@ -2543,7 +2543,20 @@
 				},
 				{
 					"name": "New Folder",
-					"item": [],
+					"item": [
+						{
+							"name": "GetUserFilterInfo",
+							"id": "22819632-c37ae2a4-c4a3-46dc-ab8d-e80c8049f928",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "22819632-7285a950-bd30-4f0c-b8b5-89b493c10891"
 				}
 			],
