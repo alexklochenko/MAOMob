@@ -2868,7 +2868,7 @@
 							"name": "Перегляд коментаря",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "SearchComments",
 									"event": [
 										{
 											"listen": "prerequest",
