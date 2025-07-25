@@ -2806,6 +2806,20 @@
 							"item": [
 								{
 									"name": "CommentDocumentList",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9d25c1fb-6725-4475-87b5-5b64c395e755",
+												"exec": [
+													"var IdDocsArrayWithComments=pm.response.json().Model;\r",
+													"pm.environment.set(\"IdDocsArrayWithComments\",IdDocsArrayWithComments);"
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
 									"id": "22819632-4187a7ad-0623-41d6-80c5-cd29818f41b6",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
