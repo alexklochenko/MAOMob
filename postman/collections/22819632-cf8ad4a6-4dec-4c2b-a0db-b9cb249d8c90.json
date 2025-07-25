@@ -2505,7 +2505,7 @@
 					"name": "Опублікувати документ",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "PublishDoc",
 							"id": "22819632-2a2bf679-3dcc-471f-9683-557737ade9cf",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
