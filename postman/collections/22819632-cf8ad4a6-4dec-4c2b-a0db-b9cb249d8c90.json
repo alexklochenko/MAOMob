@@ -1768,7 +1768,9 @@
 											"script": {
 												"id": "b57e0a7c-3495-4653-8ff4-00ecf884bc6f",
 												"exec": [
-													"pm.environment.set(\"IdDocWithReqForDelete\",pm.response.json().IDDoc);"
+													"pm.environment.set(\"IdDocWithReqForDelete\",pm.response.json().IDDoc);\r",
+													"\r",
+													"console.log(\"Причина відхилення - \" + (pm.response.json().OrgCauseState));"
 												],
 												"type": "text/javascript",
 												"packages": {}
