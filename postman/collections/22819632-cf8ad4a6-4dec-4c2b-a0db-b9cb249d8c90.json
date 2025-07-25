@@ -1779,7 +1779,7 @@
 							"name": "Перегляд запиту на видалення",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "GetReqForDelete",
 									"id": "22819632-4c9fd1af-be20-43f1-be4b-3620ec6408d5",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
