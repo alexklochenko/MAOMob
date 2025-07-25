@@ -1767,8 +1767,52 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{AccessToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "IDDoc",
+													"value": "{{IdDoсForReqForDelete}}",
+													"type": "text",
+													"uuid": "0011fa4e-e33e-4596-ad05-d345a98f8a6e"
+												},
+												{
+													"key": "CauseState",
+													"value": "{{CauseState}}",
+													"type": "text",
+													"uuid": "63ac3b2b-130f-451a-97b9-808847246f5d"
+												},
+												{
+													"key": "FilterId",
+													"value": "{{FilterId12}}",
+													"type": "text",
+													"uuid": "0ec5ec06-721e-4e66-a234-2877085b7331"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{URL}}/api/MobileServiceAPI/CreateReqForDelete",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"MobileServiceAPI",
+												"CreateReqForDelete"
+											]
+										}
 									},
 									"response": []
 								}
