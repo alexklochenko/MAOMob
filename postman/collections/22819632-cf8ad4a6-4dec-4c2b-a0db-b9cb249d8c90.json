@@ -3002,7 +3002,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "GetLicenseInfo",
 							"id": "22819632-0aad6ab2-35cf-4983-8a9c-93a242c690a1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
