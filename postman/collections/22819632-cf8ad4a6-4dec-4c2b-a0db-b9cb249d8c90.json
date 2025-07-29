@@ -2958,7 +2958,20 @@
 				},
 				{
 					"name": "Теги",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "22819632-72815d9f-86d3-4563-b54d-eead513b2ff4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "22819632-995e6dd4-51e8-47eb-a626-e690624c6bd4"
 				}
 			],
