@@ -2912,29 +2912,13 @@
 										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "Id",
-													"value": "510037",
-													"type": "text",
-													"uuid": "105f0178-9b49-46f1-a9ac-1f5534ffae3d"
-												},
-												{
-													"key": "CreatedFromTime",
-													"value": "0",
-													"type": "text",
-													"uuid": "435330c6-7e7d-4008-8df9-52352fc05f5a",
-													"disabled": true
-												},
-												{
-													"key": "CreatedToTime",
-													"value": "0",
-													"type": "text",
-													"uuid": "f956d70d-1599-4398-835a-6b294fd3af90",
-													"disabled": true
+											"mode": "raw",
+											"raw": "{\r\n    \"Id\": {{IdDocWithComments}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
 												}
-											]
+											}
 										},
 										"url": {
 											"raw": "{{URL}}/api/MobileServiceAPI/SearchComments",
