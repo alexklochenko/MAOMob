@@ -2976,24 +2976,16 @@
 										}
 									]
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "IDDoc",
-											"value": "{{IdDocForTags}}",
-											"type": "text",
-											"uuid": "d9cc3418-477c-42e4-980d-55243cccf420"
-										},
-										{
-											"key": "Tags",
-											"value": "{{TagText}}",
-											"type": "text",
-											"uuid": "d59ab7c0-931b-4215-92b0-5e0f3cf60cb0"
+									"mode": "raw",
+									"raw": "{\r\n    \"IDDoc\": {{IdDocForTags}},\r\n    \"Tags\": [ {\"text\": \"postman1\" }, { \"text\": \"postman2\"  }, { \"text\": \"postman3\"  } ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
 										}
-									]
+									}
 								},
 								"url": {
 									"raw": "{{URL}}/api/MobileServiceAPI/EditDocTags",
