@@ -2960,7 +2960,7 @@
 					"name": "Теги",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "EditDocTags",
 							"id": "22819632-72815d9f-86d3-4563-b54d-eead513b2ff4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
