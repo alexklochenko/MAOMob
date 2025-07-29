@@ -2812,8 +2812,8 @@
 											"script": {
 												"id": "9d25c1fb-6725-4475-87b5-5b64c395e755",
 												"exec": [
-													"var IdDocWithComments=pm.response.json().Model;\r",
-													"pm.environment.set(\"IdDocsArrayWithComments\",IdDocWithComments);"
+													"var IdDocsWithComments=pm.response.json().Model;\r",
+													"pm.environment.set(\"IdDocsArrayWithComments\",JSON.stringify(IdDocsWithComments));"
 												],
 												"type": "text/javascript",
 												"packages": {}
@@ -2921,10 +2921,17 @@
 													"uuid": "105f0178-9b49-46f1-a9ac-1f5534ffae3d"
 												},
 												{
-													"key": "InsDate",
-													"value": "",
+													"key": "CreatedFromTime",
+													"value": "0",
 													"type": "text",
 													"uuid": "435330c6-7e7d-4008-8df9-52352fc05f5a",
+													"disabled": true
+												},
+												{
+													"key": "CreatedToTime",
+													"value": "0",
+													"type": "text",
+													"uuid": "f956d70d-1599-4398-835a-6b294fd3af90",
 													"disabled": true
 												}
 											]
