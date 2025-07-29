@@ -2813,7 +2813,7 @@
 												"id": "9d25c1fb-6725-4475-87b5-5b64c395e755",
 												"exec": [
 													"var IdDocWithComments=pm.response.json().Model;\r",
-													"pm.environment.set(\"IdDocsArrayWithComments\",IdDocsArrayWithComments);"
+													"pm.environment.set(\"IdDocsArrayWithComments\",IdDocWithComments);"
 												],
 												"type": "text/javascript",
 												"packages": {}
