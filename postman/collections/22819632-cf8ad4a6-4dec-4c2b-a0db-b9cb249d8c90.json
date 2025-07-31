@@ -957,6 +957,58 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "CheckDiiaAuthStatus Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "92b6d283-6b29-4b67-a74d-e644a2f238a7",
+										"exec": [
+											"pm.environment.set(\"HasForSign\", \"\");\r",
+											"var responseJson;\r",
+											"responseJson = pm.response.json().RawData;\r",
+											"pm.environment.set(\"HasForSign\", responseJson);\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "22819632-251d5685-31a7-490f-971a-51039e4e26c1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"RawData\": null,\r\n    \"Signature\": null,\r\n    \"LoginType\": 9,\r\n    \"MobileAppInfo\": {\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"1.0.1.168\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileExtInfo\": \"\",\r\n        \"MobileDeviceName\": null,\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/AuthAPI/DiiaAuth ",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"AuthAPI",
+										"DiiaAuth "
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "22819632-0631dc58-c4cf-4957-bfe4-187eb7b6a6d4"
