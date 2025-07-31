@@ -885,7 +885,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"MobileAppName\": \"test\",\r\n    \"MobileAppVersion\": \"1.0.0\",\r\n    \"MobileOsName\": \"test\",\r\n    \"MobileOsVersion\": \"test\",\r\n    \"MobileDeviceName \": \"test\",\r\n    \"MobileDeviceModel\": \"test\",\r\n    \"MobileDeviceType\": \"test\",\r\n    \"MobileDeviceId\": \"test\",\r\n    \"MobileDeviceManufacturer \": \"test\",\r\n    \"MobileDeviceSerial\": \"test\",\r\n    \"MobileDeviceIMEI  \": \"test\",\r\n    \"MobileDeviceIMSI\": \"test\",\r\n    \"MobileDevicePhoneNumber \": \"test\",\r\n    \"MobileDeviceMacAddress \": \"test\",\r\n    \"MobileDeviceUUID \": \"test\"\r\n}",
+									"raw": "{\r\n    \"RawData\": null,\r\n    \"Signature\": null,\r\n    \"LoginType\": 9,\r\n    \"MobileAppInfo\": {\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"1.0.1.168\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileExtInfo\": \"\",\r\n        \"MobileDeviceName\": null,\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -893,14 +893,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL}}/api/AuthAPI/GetDataForAuth",
+									"raw": "{{URL}}/api/AuthAPI/DiiaAuth ",
 									"host": [
 										"{{URL}}"
 									],
 									"path": [
 										"api",
 										"AuthAPI",
-										"GetDataForAuth"
+										"DiiaAuth "
 									]
 								}
 							},
