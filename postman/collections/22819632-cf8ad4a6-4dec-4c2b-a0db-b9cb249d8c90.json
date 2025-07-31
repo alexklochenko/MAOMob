@@ -855,7 +855,7 @@
 					"name": "Авторизація користувача Дія",
 					"item": [
 						{
-							"name": "GetDataForAuth Copy",
+							"name": "DiiaAuth",
 							"event": [
 								{
 									"listen": "test",
