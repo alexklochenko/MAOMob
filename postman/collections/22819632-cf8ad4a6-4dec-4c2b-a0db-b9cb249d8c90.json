@@ -959,7 +959,7 @@
 							"response": []
 						},
 						{
-							"name": "CheckDiiaAuthStatus Copy",
+							"name": "Authenticate",
 							"event": [
 								{
 									"listen": "test",
