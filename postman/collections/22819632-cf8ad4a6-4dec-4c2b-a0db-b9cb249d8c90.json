@@ -109,6 +109,12 @@
 									"mode": "urlencoded",
 									"urlencoded": [
 										{
+											"key": "Token",
+											"value": "{{HasForSign}}",
+											"type": "text",
+											"uuid": "04213672-6823-4819-ba34-c0406d4104f0"
+										},
+										{
 											"key": "Data",
 											"value": "{{KeyDataFopKlochenko}}",
 											"type": "text",
@@ -128,12 +134,6 @@
 											"type": "text",
 											"uuid": "61711494-bdac-4675-9334-da748a68f1b8",
 											"disabled": true
-										},
-										{
-											"key": "Token",
-											"value": "{{HasForSign}}",
-											"type": "text",
-											"uuid": "04213672-6823-4819-ba34-c0406d4104f0"
 										},
 										{
 											"key": "Data",
