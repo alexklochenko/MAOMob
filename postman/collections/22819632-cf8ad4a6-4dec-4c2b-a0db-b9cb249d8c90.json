@@ -3255,6 +3255,29 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "GetHashForMassSignDocsList",
+							"id": "22819632-f24bffba-d777-49ff-a630-9fa3abdf859e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/MobileServiceAPI/GetHashForMassSignDocsList",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"MobileServiceAPI",
+										"GetHashForMassSignDocsList"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "22819632-e7b491e1-4acb-407b-8761-a1010c57295b"
@@ -3337,29 +3360,6 @@
 										"api",
 										"MobileServiceAPI",
 										"GetDocumentsList"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GetHashForMassSignDocsList",
-							"id": "22819632-f24bffba-d777-49ff-a630-9fa3abdf859e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{URL}}/api/MobileServiceAPI/GetHashForMassSignDocsList",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"MobileServiceAPI",
-										"GetHashForMassSignDocsList"
 									]
 								}
 							},
