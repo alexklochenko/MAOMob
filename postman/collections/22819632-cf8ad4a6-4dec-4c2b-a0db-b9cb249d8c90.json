@@ -3321,7 +3321,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"Tags\": null,\r\n    \"FilterId\": {{FilterId}}, \r\n    \"PackageId\": 0,\r\n    \"FilterPeriodId\": {{FilterPeriodId}},\r\n    \"DocCode\": null,\r\n    \"PageSize\": {{PageSize}}, \r\n    \"PageNumber\": 0,\r\n    \"SelectAll\": false,\r\n    \"FilterByContrCode\": null,\r\n    \"DocTypeId\": 0,\r\n    \"Sorting\": {\r\n        \"SortFieldName\": \"{{SortFieldName}}\",\r\n        \"SortOrder\": false\r\n    },\r\n    \"CounterMode\": 0,\r\n    \"IdDoc\": 0,\r\n    \"CreatedFromDate\": null,\r\n    \"CreatedFromDateStr\": \"\",\r\n    \"CreatedToDate\": null,\r\n    \"CreatedToDateStr\": \"\",\r\n    \"ShowConfirmedOnly\": 0\r\n}",
+									"raw": "{\r\n    \"Tags\": null,\r\n    \"FilterId\": {{DiiaFilterId}}, \r\n    \"PackageId\": 0,\r\n    \"FilterPeriodId\": {{DiiaFilterPeriodId}},\r\n    \"DocCode\": null,\r\n    \"PageSize\": {{PageSize}}, \r\n    \"PageNumber\": 0,\r\n    \"SelectAll\": false,\r\n    \"FilterByContrCode\": null,\r\n    \"DocTypeId\": 0,\r\n    \"Sorting\": {\r\n        \"SortFieldName\": \"{{SortFieldName}}\",\r\n        \"SortOrder\": false\r\n    },\r\n    \"CounterMode\": 0,\r\n    \"IdDoc\": 0,\r\n    \"CreatedFromDate\": null,\r\n    \"CreatedFromDateStr\": \"\",\r\n    \"CreatedToDate\": null,\r\n    \"CreatedToDateStr\": \"\",\r\n    \"ShowConfirmedOnly\": 0\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3350,7 +3350,18 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/MobileServiceAPI/GetHashForMassSignDocsList",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"MobileServiceAPI",
+										"GetHashForMassSignDocsList"
+									]
+								}
 							},
 							"response": []
 						}
