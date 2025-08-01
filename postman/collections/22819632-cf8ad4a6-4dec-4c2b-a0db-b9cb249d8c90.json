@@ -3343,7 +3343,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "GetHashForMassSignDocsList",
 							"id": "22819632-f24bffba-d777-49ff-a630-9fa3abdf859e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
