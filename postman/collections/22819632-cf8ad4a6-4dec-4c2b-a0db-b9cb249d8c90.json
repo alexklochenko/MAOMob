@@ -3263,18 +3263,6 @@
 					"name": "Підписання документів Дія.Підпис",
 					"item": [
 						{
-							"name": "New Request",
-							"id": "22819632-f24bffba-d777-49ff-a630-9fa3abdf859e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
-						},
-						{
 							"name": "GetDocumentsList",
 							"event": [
 								{
@@ -3351,6 +3339,18 @@
 										"GetDocumentsList"
 									]
 								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "22819632-f24bffba-d777-49ff-a630-9fa3abdf859e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
 							},
 							"response": []
 						}
