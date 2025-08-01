@@ -990,11 +990,35 @@
 									"script": {
 										"id": "92b6d283-6b29-4b67-a74d-e644a2f238a7",
 										"exec": [
-											"pm.environment.set(\"HasForSign\", \"\");\r",
-											"var responseJson;\r",
-											"responseJson = pm.response.json().RawData;\r",
-											"pm.environment.set(\"HasForSign\", responseJson);\r",
-											""
+											"if(pm.response.code==400 || pm.response.code==401)\r",
+											"{\r",
+											"    console.log(\"Виконайте повторно запити методами DiiaAuth  та CheckDiiaAuthStatus\");\r",
+											"    return;\r",
+											"}\r",
+											"\r",
+											"var jsonData=pm.response.json();\r",
+											"var TokenType_1=jsonData.TokenInfoList[0];\r",
+											"var TokenType_2=jsonData.TokenInfoList[1];\r",
+											"\r",
+											"if (TokenType_1.TokenType==1)\r",
+											"{\r",
+											"    pm.environment.set(\"AccessToken\", TokenType_1.TokenValue);\r",
+											"    console.log(\"AccessToken - успішно збережено\");\r",
+											"}\r",
+											"else\r",
+											"{\r",
+											"console.log(\"TokenType_1 - не відповідає очікуваному\")\r",
+											"}\r",
+											"\r",
+											"if (TokenType_2.TokenType==2)\r",
+											"{\r",
+											"    pm.environment.set(\"RefreshToken\", TokenType_2.TokenValue);\r",
+											"    console.log(\"RefreshToken - успішно збережено\");\r",
+											"}\r",
+											"else\r",
+											"{\r",
+											"console.log(\"TokenType_2 - не відповідає очікуваному\")\r",
+											"}"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1013,7 +1037,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"RawData\": null,\r\n    \"Signature\": null,\r\n    \"LoginType\": 9,\r\n    \"MobileAppInfo\": {\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"1.0.1.168\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileExtInfo\": \"\",\r\n        \"MobileDeviceName\": null,\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    }\r\n}",
+									"raw": "{\r\n    \"RawData\": \"{{DiiaData}}\",\r\n    \"Signature\": \"{{DiiaSignature}}\",\r\n    \"LoginType\": 9,\r\n    \"MobileAppInfo\": {\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"{{DiiaDeepLink}}\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1021,14 +1045,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL}}/api/AuthAPI/DiiaAuth ",
+									"raw": "{{URL}}/api/AuthAPI/Authenticate",
 									"host": [
 										"{{URL}}"
 									],
 									"path": [
 										"api",
 										"AuthAPI",
-										"DiiaAuth "
+										"Authenticate"
 									]
 								}
 							},
