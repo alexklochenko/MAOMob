@@ -862,10 +862,13 @@
 									"script": {
 										"id": "92b6d283-6b29-4b67-a74d-e644a2f238a7",
 										"exec": [
-											"pm.environment.set(\"HasForSign\", \"\");\r",
-											"var responseJson;\r",
-											"responseJson = pm.response.json().RawData;\r",
-											"pm.environment.set(\"HasForSign\", responseJson);\r",
+											"pm.environment.set(\"DiiaRequestId\", \"\");\r",
+											"pm.environment.set(\"DiiaRequestIdHashed\", \"\");\r",
+											"pm.environment.set(\"DiiaDeepLink\", \"\");\r",
+											"var jsonData=pm.response.json();\r",
+											"pm.environment.set(\"DiiaRequestId\", jsonData.RequestId);\r",
+											"pm.environment.set(\"DiiaRequestIdHashed\", jsonData.RequestIdHashed);\r",
+											"pm.environment.set(\"DiiaDeepLink\", jsonData.DeepLink);\r",
 											""
 										],
 										"type": "text/javascript",
