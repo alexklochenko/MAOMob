@@ -929,11 +929,20 @@
 									"script": {
 										"id": "92b6d283-6b29-4b67-a74d-e644a2f238a7",
 										"exec": [
-											"pm.environment.set(\"HasForSign\", \"\");\r",
-											"var responseJson;\r",
-											"responseJson = pm.response.json().RawData;\r",
-											"pm.environment.set(\"HasForSign\", responseJson);\r",
-											""
+											"var jsonData=pm.response.json();\r",
+											"var DiiaSignature=jsonData.Signature;\r",
+											"pm.environment.set(\"DiiaData\", jsonData.Data);\r",
+											"pm.environment.set(\"DiiaSignature\", DiiaSignature);\r",
+											"if (DiiaSignature==null)\r",
+											"{\r",
+											"    console.log(\"Необхідно виконати підписання запиту в застосунку Дія\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"if (DiiaSignature!=null)\r",
+											"{\r",
+											"    console.log(\"Запит успішно підписаний. Скористайтесь методом Authenticate \")\r",
+											"}"
 										],
 										"type": "text/javascript",
 										"packages": {}
