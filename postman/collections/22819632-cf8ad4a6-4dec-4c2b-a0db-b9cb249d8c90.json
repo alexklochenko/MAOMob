@@ -233,6 +233,7 @@
 											"\r",
 											"pm.environment.set(\"AccessToken\", AccessToken);\r",
 											"pm.environment.set(\"RefreshToken\", RefreshToken);\r",
+											"pm.environment.set(\"FileKeyCertificateFormResponse\", pm.response.json().Certificate.BodyB64);\r",
 											""
 										],
 										"type": "text/javascript",
