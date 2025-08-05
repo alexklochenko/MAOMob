@@ -3484,27 +3484,8 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "92b6d283-6b29-4b67-a74d-e644a2f238a7",
+										"id": "cc54f72e-af07-4013-a13d-38b479df52d4",
 										"exec": [
-											"pm.environment.set(\"DiiaRequestId\", \"\");\r",
-											"pm.environment.set(\"DiiaRequestIdHashed\", \"\");\r",
-											"pm.environment.set(\"DiiaDeepLink\", \"\");\r",
-											"var jsonData=pm.response.json();\r",
-											"pm.environment.set(\"DiiaRequestId\", jsonData.RequestId);\r",
-											"pm.environment.set(\"DiiaRequestIdHashed\", jsonData.RequestIdHashed);\r",
-											"pm.environment.set(\"DiiaDeepLink\", jsonData.DeepLink);\r",
-											"\r",
-											"pm.visualizer.set(`\r",
-											"    <html>\r",
-											"      <body>\r",
-											"        <div id=\"qrcode\"></div>\r",
-											"        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js\"></script>\r",
-											"        <script>\r",
-											"          new QRCode(document.getElementById(\"qrcode\"), \"${jsonData.DeepLink}\");\r",
-											"        </script>\r",
-											"      </body>\r",
-											"    </html>\r",
-											"`, { });\r",
 											""
 										],
 										"type": "text/javascript",
@@ -3518,13 +3499,20 @@
 							},
 							"request": {
 								"auth": {
-									"type": "noauth"
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{AccessToken}}",
+											"type": "string"
+										}
+									]
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"RawData\": null,\r\n    \"Signature\": null,\r\n    \"LoginType\": 9,\r\n    \"MobileAppInfo\": {\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"{{MobileAppVersion}}\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileExtInfo\": \"\",\r\n        \"MobileDeviceName\": null,\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    }\r\n}",
+									"raw": "{\r\n    \"IdUser\": null,\r\n    \"BaseUrl\": null,\r\n    \"IPAddress\": null,\r\n    \"SignRequest\": {\r\n        \"IdRequest\": null,\r\n        \"IdType\": 0,\r\n        \"IdState\": 0,\r\n        \"RequestBody\": null,\r\n        \"ResponseBody\": null,\r\n        \"InsDate\": null,\r\n        \"UpdDate\": null\r\n    },\r\n    \"HashedFilesSigning\": [\r\n        {\r\n            \"FileName\": \"100123 12876345_Акт надання послуг\",\r\n            \"FileHash\": \"QKfdZTtbtikSgFD0Y1jrhc5OUhG0ok1AxouKM+fELsQ=\"\r\n        },\r\n        {\r\n            \"FileName\": \"100124 12876345_Акт надання послуг.p7s\",\r\n            \"FileHash\": \"DsOYuy8901WGkrRbxlr1IviGnNUsLEiXHM3CRS812As=\"\r\n        },\r\n        {\r\n            \"FileName\": \"100125 12876345_Акт надання послуг_asic-e.p7s\",\r\n            \"FileHash\": \"NPJiOllc4Yev4YzQMKrzV1NGJoANZ6MHpR7s9SA9jQc=\"\r\n        }\r\n    ],\r\n    \"LoginType\": 9\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3532,14 +3520,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL}}/api/AuthAPI/DiiaAuth ",
+									"raw": "{{URL}}/api/AuthAPI/DiiaSign",
 									"host": [
 										"{{URL}}"
 									],
 									"path": [
 										"api",
 										"AuthAPI",
-										"DiiaAuth "
+										"DiiaSign"
 									]
 								}
 							},
