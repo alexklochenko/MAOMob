@@ -923,73 +923,6 @@
 							"response": []
 						},
 						{
-							"name": "DiiaAuth Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "92b6d283-6b29-4b67-a74d-e644a2f238a7",
-										"exec": [
-											"pm.environment.set(\"DiiaRequestId\", \"\");\r",
-											"pm.environment.set(\"DiiaRequestIdHashed\", \"\");\r",
-											"pm.environment.set(\"DiiaDeepLink\", \"\");\r",
-											"var jsonData=pm.response.json();\r",
-											"pm.environment.set(\"DiiaRequestId\", jsonData.RequestId);\r",
-											"pm.environment.set(\"DiiaRequestIdHashed\", jsonData.RequestIdHashed);\r",
-											"pm.environment.set(\"DiiaDeepLink\", jsonData.DeepLink);\r",
-											"\r",
-											"pm.visualizer.set(`\r",
-											"    <html>\r",
-											"      <body>\r",
-											"        <div id=\"qrcode\"></div>\r",
-											"        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js\"></script>\r",
-											"        <script>\r",
-											"          new QRCode(document.getElementById(\"qrcode\"), \"${jsonData.DeepLink}\");\r",
-											"        </script>\r",
-											"      </body>\r",
-											"    </html>\r",
-											"`, { });\r",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "22819632-e64fbab2-7d66-4b71-b959-bb61c0b83f27",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"RawData\": null,\r\n    \"Signature\": null,\r\n    \"LoginType\": 9,\r\n    \"MobileAppInfo\": {\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"{{MobileAppVersion}}\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileExtInfo\": \"\",\r\n        \"MobileDeviceName\": null,\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/AuthAPI/DiiaAuth ",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"AuthAPI",
-										"DiiaAuth "
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "CheckDiiaAuthStatus",
 							"event": [
 								{
@@ -3546,74 +3479,52 @@
 							"response": []
 						},
 						{
-							"name": "GetHashForMassSignDocsList Copy",
+							"name": "DiiaAuth Copy",
 							"event": [
 								{
-									"listen": "prerequest",
+									"listen": "test",
 									"script": {
-										"id": "37be8682-219a-4c8a-afcf-4a1481426ea6",
+										"id": "92b6d283-6b29-4b67-a74d-e644a2f238a7",
 										"exec": [
-											"        \r",
-											"        var DiiaDocsListForGetHashForMass=[];\r",
+											"pm.environment.set(\"DiiaRequestId\", \"\");\r",
+											"pm.environment.set(\"DiiaRequestIdHashed\", \"\");\r",
+											"pm.environment.set(\"DiiaDeepLink\", \"\");\r",
+											"var jsonData=pm.response.json();\r",
+											"pm.environment.set(\"DiiaRequestId\", jsonData.RequestId);\r",
+											"pm.environment.set(\"DiiaRequestIdHashed\", jsonData.RequestIdHashed);\r",
+											"pm.environment.set(\"DiiaDeepLink\", jsonData.DeepLink);\r",
 											"\r",
-											"        var DiiaDocumentListForSignIDDoc=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDDoc\"));\r",
-											"        var DiiaDocumentListForSignIDDocArtOffice=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDDocArtOffice\"));\r",
-											"        var DiiaDocumentListForSignIDDocArtOfficeOriginal=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDDocArtOfficeOriginal\"));\r",
-											"        var DiiaDocumentListForSignIDAsicEManifestXml=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDAsicEManifestXml\"));\r",
-											"        var DiiaIdSignerList=JSON.parse(pm.environment.get(\"DiiaIdSignerList\"));\r",
-											"        var DiiaIdCommitmentList=JSON.parse(pm.environment.get(\"DiiaIdCommitmentList\"));\r",
-											"\r",
-											"      \r",
-											"      for (var i=0; i<DiiaDocumentListForSignIDDoc.length; i++)\r",
-											"      {\r",
-											"        var DocForSign=\r",
-											"            {\r",
-											"            \"IDDocArtOffice\": DiiaDocumentListForSignIDDocArtOffice[i], //обов'язкове поле\r",
-											"            \"IDDocArtOfficeOriginal\": DiiaDocumentListForSignIDDocArtOfficeOriginal[i], //обов'язкове поле\r",
-											"            \"IDPrimaryDocXmlInArtOffice\": \"0\", //обов'язкове поле\r",
-											"            \"IDAsicEManifestXml\": DiiaDocumentListForSignIDAsicEManifestXml[i], //обов'язкове поле\r",
-											"            \"IDDoc\": DiiaDocumentListForSignIDDoc[i], //обов'язкове поле\r",
-											"            \"IsAoSupport\": true, //обов'язкове поле\r",
-											"            \"SignerId\": DiiaIdSignerList[i], //обов'язкове поле\r",
-											"            \"Commitment\": DiiaIdCommitmentList[i], //обов'язкове поле\r",
-											"            \"FirstInMassSign\": false,\r",
-											"            \"Mc\": null,\r",
-											"            \"Document\": null\r",
-											"            };\r",
-											"        \r",
-											"        DiiaDocsListForGetHashForMass.push(DocForSign)\r",
-											"\r",
-											"      }\r",
-											"\r",
-											"      pm.environment.set(\"DiiaDocsListForGetHashForMass\", JSON.stringify(DiiaDocsListForGetHashForMass))\r",
-											"\r",
-											"      console.log(pm.environment.get(\"DiiaDocsListForGetHashForMass\"))"
+											"pm.visualizer.set(`\r",
+											"    <html>\r",
+											"      <body>\r",
+											"        <div id=\"qrcode\"></div>\r",
+											"        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js\"></script>\r",
+											"        <script>\r",
+											"          new QRCode(document.getElementById(\"qrcode\"), \"${jsonData.DeepLink}\");\r",
+											"        </script>\r",
+											"      </body>\r",
+											"    </html>\r",
+											"`, { });\r",
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
 									}
 								}
 							],
-							"id": "22819632-8429cd21-e942-4728-9bba-9d22073be07b",
+							"id": "22819632-e64fbab2-7d66-4b71-b959-bb61c0b83f27",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{AccessToken}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"RawData\": \"{{DiiaData}}\",\r\n    \"Signature\": \"{{DiiaSignature}}\",\r\n    \"Certificate\": \"{{DiiaKeyCertificateFormResponse}}\", //якщо RawData та Signature пусті то треба передавати Certificate боді в бейз 64 форматі. Якщо файловий ключ то передаєм серт зі считаного ключа, якщо хмарний то ні бо немає звідки взяти і буде видобуватись з сігнатури\r\n    \"LoginType\": 9, //обов'язкове поле\r\n    \"MobileAppInfo\": { //обов'язкове поле\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"{{MobileAppVersion}}\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileExtInfo\": \"\",\r\n        \"MobileDeviceName\": null,\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    },\r\n    \"DocumentId\": null,\r\n    \"DocumentIdOrig\": null,\r\n    \"IDAsicEManifestXml\": null,\r\n    \"PdXmlId\": null,\r\n    \"SignerId\": null,\r\n    \"Commitment\": null,\r\n    \"Comment\": \"Тестовий коментар\", //якщо юзер вказав коментар для підпису\r\n    \"IsSeal\": false,\r\n    \"PackageId\": null,\r\n    \"SavedCloudCertificate\": null,\r\n    \"DocsList\": {{DiiaDocsListForGetHashForMass}},\r\n    \"SignFormatSettings\": {\r\n        \"IsSignAoEnabled\": 1, //обов'язкове поле\r\n        \"IsSignAoOnlyEnabled\": 0, //обов'язкове поле\r\n        \"IsSignP7SEnabled\": 1, //обов'язкове поле\r\n        \"IsSignAsiceEnabled\": 1 //обов'язкове поле\r\n    },\r\n    \"MaxHashesPerChunk\": 40 //обов'язкове поле Для хмарних 40 для файлових 100\r\n}",
+									"raw": "{\r\n    \"RawData\": null,\r\n    \"Signature\": null,\r\n    \"LoginType\": 9,\r\n    \"MobileAppInfo\": {\r\n        \"MobileAppName\": \"Art Sign Mobile\",\r\n        \"MobileAppVersion\": \"{{MobileAppVersion}}\",\r\n        \"MobileOsName\": \"Android\",\r\n        \"MobileOsVersion\": \"14.0.1.285\",\r\n        \"MobileExtInfo\": \"\",\r\n        \"MobileDeviceName\": null,\r\n        \"MobileDeviceModel\": null,\r\n        \"MobileDeviceType\": null,\r\n        \"MobileDeviceId\": null,\r\n        \"MobileDeviceManufacturer\": null,\r\n        \"MobileDeviceSerial\": null,\r\n        \"MobileDeviceIMEI\": null,\r\n        \"MobileDeviceIMSI\": null,\r\n        \"MobileDevicePhoneNumber\": null,\r\n        \"MobileDeviceMacAddress\": null,\r\n        \"MobileDeviceUUID\": null\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3621,14 +3532,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL}}/api/MobileServiceAPI/GetHashForMassSignDocsList",
+									"raw": "{{URL}}/api/AuthAPI/DiiaAuth ",
 									"host": [
 										"{{URL}}"
 									],
 									"path": [
 										"api",
-										"MobileServiceAPI",
-										"GetHashForMassSignDocsList"
+										"AuthAPI",
+										"DiiaAuth "
 									]
 								}
 							},
