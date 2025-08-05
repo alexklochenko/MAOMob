@@ -1024,7 +1024,9 @@
 											"else\r",
 											"{\r",
 											"console.log(\"TokenType_2 - не відповідає очікуваному\")\r",
-											"}"
+											"}\r",
+											"\r",
+											"pm.environment.set(\"DiiaKeyCertificateFormResponse\", pm.response.json().Certificate.BodyB64);"
 										],
 										"type": "text/javascript",
 										"packages": {}
