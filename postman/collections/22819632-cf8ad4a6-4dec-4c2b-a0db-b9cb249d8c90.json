@@ -3397,41 +3397,30 @@
 									"script": {
 										"id": "37be8682-219a-4c8a-afcf-4a1481426ea6",
 										"exec": [
-											"        \r",
-											"        var DiiaDocsListForGetHashForMass=[];\r",
 											"\r",
-											"        var DiiaDocumentListForSignIDDoc=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDDoc\"));\r",
-											"        var DiiaDocumentListForSignIDDocArtOffice=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDDocArtOffice\"));\r",
-											"        var DiiaDocumentListForSignIDDocArtOfficeOriginal=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDDocArtOfficeOriginal\"));\r",
-											"        var DiiaDocumentListForSignIDAsicEManifestXml=JSON.parse(pm.environment.get(\"DiiaDocumentListForSignIDAsicEManifestXml\"));\r",
-											"        var DiiaIdSignerList=JSON.parse(pm.environment.get(\"DiiaIdSignerList\"));\r",
-											"        var DiiaIdCommitmentList=JSON.parse(pm.environment.get(\"DiiaIdCommitmentList\"));\r",
 											"\r",
-											"      \r",
-											"      for (var i=0; i<DiiaDocumentListForSignIDDoc.length; i++)\r",
-											"      {\r",
-											"        var DocForSign=\r",
-											"            {\r",
-											"            \"IDDocArtOffice\": DiiaDocumentListForSignIDDocArtOffice[i], //обов'язкове поле\r",
-											"            \"IDDocArtOfficeOriginal\": DiiaDocumentListForSignIDDocArtOfficeOriginal[i], //обов'язкове поле\r",
-											"            \"IDPrimaryDocXmlInArtOffice\": \"0\", //обов'язкове поле\r",
-											"            \"IDAsicEManifestXml\": DiiaDocumentListForSignIDAsicEManifestXml[i], //обов'язкове поле\r",
-											"            \"IDDoc\": DiiaDocumentListForSignIDDoc[i], //обов'язкове поле\r",
-											"            \"IsAoSupport\": true, //обов'язкове поле\r",
-											"            \"SignerId\": DiiaIdSignerList[i], //обов'язкове поле\r",
-											"            \"Commitment\": DiiaIdCommitmentList[i], //обов'язкове поле\r",
-											"            \"FirstInMassSign\": false,\r",
-											"            \"Mc\": null,\r",
-											"            \"Document\": null\r",
-											"            };\r",
-											"        \r",
-											"        DiiaDocsListForGetHashForMass.push(DocForSign)\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "36123344-ae73-4f4e-be21-6485c7be3cc0",
+										"exec": [
+											"var jsonData=pm.response.json();\r",
 											"\r",
-											"      }\r",
 											"\r",
-											"      pm.environment.set(\"DiiaDocsListForGetHashForMass\", JSON.stringify(DiiaDocsListForGetHashForMass))\r",
 											"\r",
-											"      console.log(pm.environment.get(\"DiiaDocsListForGetHashForMass\"))"
+											"var DiiaDataFromGetHashAoc=jsonData[0].Mc.Data;\r",
+											"var DiiaHashOrigFromGetHashP7s=jsonData[0].Mc.HashOrig;\r",
+											"var DiiaHashAsicEFromGetHashAsicE=jsonData[0].Mc.HashAsicE;\r",
+											"\r",
+											"pm.environment.set(\"DiiaDataFromGetHashAoc\", DiiaDataFromGetHashAoc);\r",
+											"pm.environment.set(\"DiiaHashOrigFromGetHashP7s\", DiiaHashOrigFromGetHashP7s);\r",
+											"pm.environment.set(\"DiiaHashAsicEFromGetHashAsicE\", DiiaHashAsicEFromGetHashAsicE);"
 										],
 										"type": "text/javascript",
 										"packages": {}
