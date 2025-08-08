@@ -3412,15 +3412,26 @@
 										"exec": [
 											"var jsonData=pm.response.json();\r",
 											"\r",
+											"pm.environment.set(\"DiiaDataFromGetHashAoc\", \"\");\r",
+											"pm.environment.set(\"DiiaHashOrigFromGetHashP7s\", \"\");\r",
+											"pm.environment.set(\"DiiaHashAsicEFromGetHashAsicE\", \"\");\r",
+											"\r",
+											"var DiiaDataFromGetHashAoc=[];\r",
+											"var DiiaHashOrigFromGetHashP7s=[];\r",
+											"var DiiaHashAsicEFromGetHashAsicE=[];\r",
+											"\r",
+											"for(var i=0; i<jsonData.length; i++)\r",
+											"{\r",
+											"    DiiaDataFromGetHashAoc.push(jsonData[i].Mc.Data);\r",
+											"    DiiaHashOrigFromGetHashP7s.push(jsonData[i].Mc.HashOrig);\r",
+											"    DiiaHashAsicEFromGetHashAsicE.push(jsonData[i].Mc.HashAsicE);\r",
+											"\r",
+											"}\r",
 											"\r",
 											"\r",
-											"var DiiaDataFromGetHashAoc=jsonData[0].Mc.Data;\r",
-											"var DiiaHashOrigFromGetHashP7s=jsonData[0].Mc.HashOrig;\r",
-											"var DiiaHashAsicEFromGetHashAsicE=jsonData[0].Mc.HashAsicE;\r",
-											"\r",
-											"pm.environment.set(\"DiiaDataFromGetHashAoc\", DiiaDataFromGetHashAoc);\r",
-											"pm.environment.set(\"DiiaHashOrigFromGetHashP7s\", DiiaHashOrigFromGetHashP7s);\r",
-											"pm.environment.set(\"DiiaHashAsicEFromGetHashAsicE\", DiiaHashAsicEFromGetHashAsicE);"
+											"pm.environment.set(\"DiiaDataFromGetHashAoc\", JSON.stringify(DiiaDataFromGetHashAoc));\r",
+											"pm.environment.set(\"DiiaHashOrigFromGetHashP7s\", JSON.stringify(DiiaHashOrigFromGetHashP7s));\r",
+											"pm.environment.set(\"DiiaHashAsicEFromGetHashAsicE\", JSON.stringify(DiiaHashAsicEFromGetHashAsicE));"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -3480,6 +3491,37 @@
 										"type": "text/javascript",
 										"packages": {}
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "358c9032-feed-424c-8c50-7db8457d346a",
+										"exec": [
+											"pm.environment.set(\"HashedFilesSigning\", \"\"):\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"[\r",
+											"        {\r",
+											"            \"FileName\": \"100123 12876345_Акт надання послуг\",\r",
+											"            \"FileHash\": \"QKfdZTtbtikSgFD0Y1jrhc5OUhG0ok1AxouKM+fELsQ=\"\r",
+											"        },\r",
+											"        {\r",
+											"            \"FileName\": \"100124 12876345_Акт надання послуг.p7s\",\r",
+											"            \"FileHash\": \"DsOYuy8901WGkrRbxlr1IviGnNUsLEiXHM3CRS812As=\"\r",
+											"        },\r",
+											"        {\r",
+											"            \"FileName\": \"100125 12876345_Акт надання послуг_asic-e.p7s\",\r",
+											"            \"FileHash\": \"NPJiOllc4Yev4YzQMKrzV1NGJoANZ6MHpR7s9SA9jQc=\"\r",
+											"        }\r",
+											"    ]"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
 							],
 							"id": "22819632-e64fbab2-7d66-4b71-b959-bb61c0b83f27",
@@ -3501,7 +3543,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"IdUser\": null,\r\n    \"BaseUrl\": null,\r\n    \"IPAddress\": null,\r\n    \"SignRequest\": {\r\n        \"IdRequest\": null,\r\n        \"IdType\": 0,\r\n        \"IdState\": 0,\r\n        \"RequestBody\": null,\r\n        \"ResponseBody\": null,\r\n        \"InsDate\": null,\r\n        \"UpdDate\": null\r\n    },\r\n    \"HashedFilesSigning\": [\r\n        {\r\n            \"FileName\": \"100123 12876345_Акт надання послуг\",\r\n            \"FileHash\": \"QKfdZTtbtikSgFD0Y1jrhc5OUhG0ok1AxouKM+fELsQ=\"\r\n        },\r\n        {\r\n            \"FileName\": \"100124 12876345_Акт надання послуг.p7s\",\r\n            \"FileHash\": \"DsOYuy8901WGkrRbxlr1IviGnNUsLEiXHM3CRS812As=\"\r\n        },\r\n        {\r\n            \"FileName\": \"100125 12876345_Акт надання послуг_asic-e.p7s\",\r\n            \"FileHash\": \"NPJiOllc4Yev4YzQMKrzV1NGJoANZ6MHpR7s9SA9jQc=\"\r\n        }\r\n    ],\r\n    \"LoginType\": 9\r\n}",
+									"raw": "{\r\n    \"IdUser\": null,\r\n    \"BaseUrl\": null,\r\n    \"IPAddress\": null,\r\n    \"SignRequest\": {\r\n        \"IdRequest\": null,\r\n        \"IdType\": 0,\r\n        \"IdState\": 0,\r\n        \"RequestBody\": null,\r\n        \"ResponseBody\": null,\r\n        \"InsDate\": null,\r\n        \"UpdDate\": null\r\n    },\r\n    \"HashedFilesSigning\": {{HashedFilesSigning}},\r\n    \"LoginType\": 9\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
