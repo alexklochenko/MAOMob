@@ -3486,22 +3486,26 @@
 							"name": "DiiaSign",
 							"event": [
 								{
-									"listen": "test",
-									"script": {
-										"id": "cc54f72e-af07-4013-a13d-38b479df52d4",
-										"exec": [
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								},
-								{
 									"listen": "prerequest",
 									"script": {
-										"id": "358c9032-feed-424c-8c50-7db8457d346a",
+										"id": "cb89d1a9-88d3-42fd-8f86-22ea95e0a7bf",
 										"exec": [
 											"pm.environment.set(\"HashedFilesSigning\", \"\");\r",
+											"\r",
+											"var HashedFilesSigning=[];\r",
+											"\r",
+											"var FileHashAos=pm.environment.get(\"DiiaDataFromGetHashAoc\")[0].json();\r",
+											"var DiiaDocumentListForSignIDDocArtOffice=pm.environment.get(\"DiiaDocumentListForSignIDDocArtOffice\")[0].json();\r",
+											"var DiiaDocumentListForSignIDDoc=pm.environment.get(\"DiiaDocumentListForSignIDDoc\")[0].json();\r",
+											"\r",
+											"var FileNameAosValue=DiiaDocumentListForSignIDDocArtOffice+\" \"+DiiaDocumentListForSignIDDoc+\"_\"+\r",
+											"var HashedFilesSigningAoc=\r",
+											"{\r",
+											"    \"FileName\":\r",
+											"    \"FileHash\":\"{{FileHashAos}}\"\r",
+											"}\r",
+											"\r",
+											"\r",
 											"\r",
 											"\r",
 											"\r",
@@ -3522,6 +3526,17 @@
 											"            \"FileHash\": \"NPJiOllc4Yev4YzQMKrzV1NGJoANZ6MHpR7s9SA9jQc=\"\r",
 											"        }\r",
 											"    ]"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "254f7556-d01c-466b-ba6f-79029b261af2",
+										"exec": [
+											""
 										],
 										"type": "text/javascript",
 										"packages": {}
