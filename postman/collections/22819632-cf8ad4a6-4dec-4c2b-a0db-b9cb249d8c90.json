@@ -3501,7 +3501,7 @@
 									"script": {
 										"id": "358c9032-feed-424c-8c50-7db8457d346a",
 										"exec": [
-											"pm.environment.set(\"HashedFilesSigning\", \"\"):\r",
+											"pm.environment.set(\"HashedFilesSigning\", \"\");\r",
 											"\r",
 											"\r",
 											"\r",
