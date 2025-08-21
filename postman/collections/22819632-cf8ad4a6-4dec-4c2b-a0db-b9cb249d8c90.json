@@ -139,19 +139,22 @@
 											"key": "Data",
 											"value": "{{KeyDataFoKlochenkoDps}}",
 											"type": "text",
-											"uuid": "afc02a99-32cf-4df0-9e7f-e2969d1a16e9"
+											"uuid": "afc02a99-32cf-4df0-9e7f-e2969d1a16e9",
+											"disabled": true
 										},
 										{
 											"key": "Certificate",
 											"value": "{{CertFoKlochDps}}",
 											"type": "text",
-											"uuid": "a64d5e00-81fe-4dac-8051-80fef18879c4"
+											"uuid": "a64d5e00-81fe-4dac-8051-80fef18879c4",
+											"disabled": true
 										},
 										{
 											"key": "MasterData",
 											"value": "{{PassFoKlochDps}}",
 											"type": "text",
-											"uuid": "1e60db41-8373-49ca-8a57-73b25a64ebf7"
+											"uuid": "1e60db41-8373-49ca-8a57-73b25a64ebf7",
+											"disabled": true
 										},
 										{
 											"key": "Data",
@@ -172,13 +175,6 @@
 											"value": "{{PassTov12Dir}}",
 											"type": "text",
 											"uuid": "fe85d2a8-39d8-4fa3-98b5-476eb518c48a",
-											"disabled": true
-										},
-										{
-											"key": "",
-											"value": "",
-											"type": "text",
-											"uuid": "5fe08ad4-f888-4a75-8dcc-8d35192df132",
 											"disabled": true
 										}
 									]
