@@ -24,7 +24,10 @@
 											"var responseJson;\r",
 											"responseJson = pm.response.json().RawData;\r",
 											"pm.environment.set(\"HasForSign\", responseJson);\r",
-											""
+											"\r",
+											"\r",
+											"\r",
+											"// console.log(pm.globals.get(\"maoProdUrl\"));"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -227,6 +230,9 @@
 											"pm.environment.set(\"AccessToken\", AccessToken);\r",
 											"pm.environment.set(\"RefreshToken\", RefreshToken);\r",
 											"pm.environment.set(\"FileKeyCertificateFormResponse\", pm.response.json().Certificate.BodyB64);\r",
+											"\r",
+											"\r",
+											"\r",
 											""
 										],
 										"type": "text/javascript",
